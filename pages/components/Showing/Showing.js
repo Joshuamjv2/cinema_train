@@ -6,8 +6,8 @@ import dungeons_dragons from "../../../public/images/showing/dungeons_dragons.jp
 
 export default function Showing(){
     return(
-        <div className="py-8">
-            <div className="mx-auto max-w-screen-2xl uppercase px-2 lg:px-0">
+        <div className="py-8 container">
+            <div className="uppercase px-2 lg:px-0">
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8">Now Showing</h2>
                 <ul className="gap-4 grid md:grid-cols-3 lg:grid-cols-4 pb-8">
                     <SingleMovie image={creed} height={500} />
