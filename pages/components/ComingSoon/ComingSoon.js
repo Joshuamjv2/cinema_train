@@ -38,34 +38,34 @@ export default function ComingSoon(){
                             <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Drama</li>
                             <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Crime</li>
                         </ul>
-                        <p className="text-lg leading-relaxed mr-48 py-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum nesciunt reiciendis iste incidunt accusamus excepturi sed autem aperiam rerum consectetur optio nostrum, eligendi, sit ipsam qui temporibus expedita praesentium fugit! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Placeat repudiandae voluptatum earum porro quidem aliquam tempora dolor illo, laborum a soluta consequuntur debitis ad. Ea accusamus accusantium vel! Ullam repellat eligendi aut! Sit sint reprehenderit possimus tenetur?</p>
+                        <p className="text-lg leading-relaxed mr-48 py-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum nesciunt reiciendis iste incidunt accusamus excepturi sed autem aperiam rerum consectetur optio nostrum, eligendi, sit ipsam qui temporibus expedita praesentium fugit! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Placeat repudiandae voluptatum earum porro quidem aliquam tempora dolor illo, laborum a soluta consequuntur debitis ad.</p>
                         <ul className="flex gap-6">
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_1} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-medium">Donovan <br/> Albrighton</p>
                                 </li>
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_2} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Michael <br/> B Jordan</p>
                                 </li>
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_3} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Rhoad <br/> Dahl</p>
                                 </li>
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_4} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Lanna <br/> Del Ray</p>
                                 </li>
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_5} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Tommy <br/> Goldman</p>
