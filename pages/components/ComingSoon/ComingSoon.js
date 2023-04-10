@@ -22,7 +22,8 @@ export default function ComingSoon(){
     "overflow": "hidden"
     }
     return(
-        <div className="py-8 container" style={slider_style}>
+        <div style={slider_style} className="flex max-w-xl md:max-w-7xl lg:max-w-screen-2xl">
+            <div className="py-8 px-4 md:px-12">
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8 uppercase">Coming Soon</h2>
 
                 {/* Single Coming Soon with details */}
@@ -32,12 +33,14 @@ export default function ComingSoon(){
                         <p className="text-xl text-[#96031a] font-thin  uppercase">Coming: 24th May, 2023</p>
                         <h2 className="uppercase mb-4 font-bold text-5xl">Creed iii*</h2>
                         <ul className="hidden md:flex gap-4 mt-4 uppercase text-[#b4b3b6]">
-                            <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Action</li>
-                            <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Sport</li>
-                            <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Drama</li>
-                            <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Crime</li>
+                            <li className="border border-[#b4b3b6]  py-1 px-2 rounded-md outline-transparent">Action</li>
+                            <li className="border border-[#b4b3b6]  py-1 px-2 rounded-md outline-transparent">Sport</li>
+                            <li className="border border-[#b4b3b6]  py-1 px-2 rounded-md outline-transparent">Drama</li>
+                            <li className="border border-[#b4b3b6]  py-1 px-2 rounded-md outline-transparent">Crime</li>
                         </ul>
-                        <p className="text-lg leading-relaxed mr-48 py-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum nesciunt reiciendis iste incidunt accusamus excepturi sed autem aperiam rerum consectetur optio nostrum, eligendi, sit ipsam qui temporibus expedita praesentium fugit! Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Placeat repudiandae voluptatum earum porro quidem aliquam tempora dolor illo, laborum a soluta consequuntur debitis ad.</p>
+                        <p className="text-lg leading-relaxed max-w-3xl py-8">
+                            Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
+                        </p>
                         <ul className="flex gap-6">
                                 <li className="">
                                     <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
@@ -78,12 +81,14 @@ export default function ComingSoon(){
                 </div>
 
                 {/* multiple coming soon to select from */}
-                <ul className="gap-2  grid md:grid-cols-3 lg:grid-cols-4 py-24">
+                <ul className="gap-2 grid md:grid-cols-3 lg:grid-cols-4 py-24">
                     <SingleComingSoon image={creed} height={480} />
                     <SingleComingSoon image={tetris} height={480} />
                     <SingleComingSoon image={john_wick} height={480} />
                     <SingleComingSoon image={dungeons_dragons} height={480} />
                 </ul>
+
+            </div>
         </div>
     )
 }

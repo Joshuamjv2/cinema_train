@@ -37,38 +37,37 @@ export default function Slider(){
                             </div>
                         </div>
                         <div className="w-3/6 = hidden xl:block">
-                            <p className="text-lg leading-relaxed">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima porro odio quos maiores temporibus asperiores cupiditate! Rerum, totam eaque modi libero maiores esse voluptates iure ab rem commodi corporis autem.
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita optio debitis illum nihil cumque aperiam repellat?
+                            <p className="text-lg leading-relaxed max-w-3xl">
+                                Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
                             </p>
-                            <h3 className="text-[#ffc300] text-3xl font-bold py-4 uppercase">Cast</h3>
+                            <h3 className="text-[#ffc300] text-3xl font-medium py-4 uppercase">Casting</h3>
                             <ul className="flex gap-6">
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_1} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-medium">Donovan <br/> Albrighton</p>
                                 </li>
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_2} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Michael <br/> B Jordan</p>
                                 </li>
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_3} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Rhoad <br/> Dahl</p>
                                 </li>
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_4} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Lanna <br/> Del Ray</p>
                                 </li>
                                 <li className="">
-                                    <div className="h-24 w-24 rounded-full border overflow-hidden border-transparent">
+                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
                                         <Image src={cast_5} className="object-cover w-full h-full"/>
                                     </div>
                                     <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Tommy <br/> Goldman</p>

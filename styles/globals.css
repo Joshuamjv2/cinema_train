@@ -35,23 +35,21 @@ body {
 
 .container {
   max-width: 90%;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   margin: 0 auto;
 }
 
 @media (min-width: 640px) {
   .container {
-    padding-right: 4rem;
-    padding-left: 4rem;
+    padding-inline: 4rem;
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 1400;
   }
 }
 
 @media (min-width: 1500px) {
   .container {
-    padding-right: 6rem;
-    padding-left: 6rem;
+    padding-inline: 6rem;
     margin: 0 auto;
     max-width: 1400px;
   }
