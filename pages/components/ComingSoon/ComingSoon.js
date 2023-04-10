@@ -22,8 +22,7 @@ export default function ComingSoon(){
     "overflow": "hidden"
     }
     return(
-        <div className="py-8" style={slider_style}>
-            <div className="mx-auto max-w-screen-2xl px-2 lg:px-0">
+        <div className="py-8 container" style={slider_style}>
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8 uppercase">Coming Soon</h2>
 
                 {/* Single Coming Soon with details */}
@@ -85,8 +84,6 @@ export default function ComingSoon(){
                     <SingleComingSoon image={john_wick} height={480} />
                     <SingleComingSoon image={dungeons_dragons} height={480} />
                 </ul>
-
-            </div>
         </div>
     )
 }
