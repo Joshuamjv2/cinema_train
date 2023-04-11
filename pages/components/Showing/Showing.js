@@ -9,12 +9,12 @@ export default function Showing(){
         <div className="flex max-w-xl md:max-w-7xl lg:max-w-screen-2xl">
             <div className="pb-8 pt-16 mx-auto px-4 md:px-12">
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8 uppercase">Now Showing</h2>
-                    <ul className="gap-4 grid md:grid-cols-3 lg:grid-cols-4 pb-8">
-                        <SingleMovie image={creed} image_height={500} />
-                        <SingleMovie image={tetris} image_height={500} />
-                        <SingleMovie image={john_wick} image_height={500} />
-                        <SingleMovie image={dungeons_dragons} image_height={500} />
-                    </ul>
+                <ul className="gap-4 grid md:grid-cols-3 lg:grid-cols-4 pb-8">
+                    <SingleMovie image={creed} image_height={500} />
+                    <SingleMovie image={tetris} image_height={500} />
+                    <SingleMovie image={john_wick} image_height={500} />
+                    <SingleMovie image={dungeons_dragons} image_height={500} />
+                </ul>
             </div>
         </div>
     )

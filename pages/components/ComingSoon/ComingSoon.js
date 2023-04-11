@@ -5,12 +5,17 @@ import cast_3 from "../../../public/images/cast/cast3.jpg"
 import cast_4 from "../../../public/images/cast/cast4.jpg"
 import cast_5 from "../../../public/images/cast/cast5.jpg"
 
+import Genre from "../Genre"
+import Button from "../Button"
+import Rating from "../Rating"
+import Cast from "../Cast"
 
 import creed from "../../../public/images/showing/creed.jpg"
 import john_wick from "../../../public/images/showing/john_wick4.jpg"
 import tetris from "../../../public/images/showing/tetris.jpg"
 import dungeons_dragons from "../../../public/images/showing/dungeons_dragons.jpg"
 import SingleComingSoon from "./SingleComingSoon"
+
 
 export default function ComingSoon(){
     const slider_style = {
@@ -23,70 +28,48 @@ export default function ComingSoon(){
     }
     return(
         <div style={slider_style} className="flex max-w-xl md:max-w-7xl lg:max-w-screen-2xl">
-            <div className="py-8 px-4 md:px-12">
+            <div className="py-8 px-4 md:px-12 mx-auto">
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8 uppercase">Coming Soon</h2>
 
                 {/* Single Coming Soon with details */}
-                <div className="flex flex-col gap-8 md:flex-row justify-between items-start lg:items-end">
+                <div className="flex flex-col gap-12 md:flex-row justify-between items-start lg:items-end">
                     <Image src={creed} height={600}/>
                     <div className="text-bold w-4/5">
-                        <p className="text-xl text-[#96031a] font-thin  uppercase">Coming: 24th May, 2023</p>
                         <h2 className="uppercase mb-4 font-bold text-5xl">Creed iii*</h2>
                         <ul className="hidden md:flex gap-4 mt-4 uppercase text-[#b4b3b6]">
-                            <li className="border border-[#b4b3b6]  py-1 px-2 rounded-md outline-transparent">Action</li>
-                            <li className="border border-[#b4b3b6]  py-1 px-2 rounded-md outline-transparent">Sport</li>
-                            <li className="border border-[#b4b3b6]  py-1 px-2 rounded-md outline-transparent">Drama</li>
-                            <li className="border border-[#b4b3b6]  py-1 px-2 rounded-md outline-transparent">Crime</li>
+                            <Genre genre={"Action"}/>
+                            <Genre genre={"Sport"}/>
+                            <Genre genre={"Drama"}/>
+                            <Genre genre={"Crime"}/>
                         </ul>
-                        <p className="text-lg leading-relaxed max-w-3xl py-8">
+                        <p className="text-lg text-[#fbfffe]  my-2">Coming: 24th May, 2023</p>
+                        <p className="text-lg leading-tight max-w-xl py-8">
                             Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
                         </p>
                         <ul className="flex gap-6">
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_1} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-medium">Donovan <br/> Albrighton</p>
-                                </li>
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_2} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Michael <br/> B Jordan</p>
-                                </li>
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_3} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Rhoad <br/> Dahl</p>
-                                </li>
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_4} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Lanna <br/> Del Ray</p>
-                                </li>
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_5} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Tommy <br/> Goldman</p>
-                                </li>
-                            </ul>
+                            <Cast image={cast_1} first_name={"Donovan"} last_names={"Albrighton"}/>
+                            <Cast image={cast_2} first_name={"Michael"} last_names={"B Jordan"}/>
+                            <Cast image={cast_3} first_name={"Rhoad"} last_names={"Dahl"}/>
+                            <Cast image={cast_4} first_name={"Lana"} last_names={"Del Rey"}/>
+                            <Cast image={cast_5} first_name={"Tommy"} last_names={"Goldman"}/>
+                        </ul>
                         <div className="flex items-center gap-3 mt-8">
-                            <p className="h-14 w-14 rounded-full border text-[#b4b3b6] border-[#b4b3b6] text-center pt-3.5 font-semibold">13+</p>
-                                <button className="outline-none bg-[#ffc300] text-md md:text-xl text-[#96031a] p-3 font-semibold rounded-md hover:text-[#ffc300] hover:duration-300 hover:bg-[#96031a] uppercase">Book Tickets</button>
+                            <Rating rating={"13+"}/>
+                            <Button text={"Book Tickets"}/>
                         </div>
                     </div>
                 </div>
 
                 {/* multiple coming soon to select from */}
-                <ul className="gap-2 grid md:grid-cols-3 lg:grid-cols-4 py-24">
-                    <SingleComingSoon image={creed} height={480} />
-                    <SingleComingSoon image={tetris} height={480} />
-                    <SingleComingSoon image={john_wick} height={480} />
-                    <SingleComingSoon image={dungeons_dragons} height={480} />
+                {/* <div className="pb-8 pt-16 mx-auto px-4 md:px-12"> */}
+
+                <ul className="grid md:grid-cols-3 lg:grid-cols-4 py-16 gap-14">
+                    <SingleComingSoon image={creed} image_height={500} />
+                    <SingleComingSoon image={tetris} image_height={500} />
+                    <SingleComingSoon image={john_wick} image_height={500} />
+                    <SingleComingSoon image={dungeons_dragons} image_height={500} />
                 </ul>
+                {/* </div> */}
 
             </div>
         </div>

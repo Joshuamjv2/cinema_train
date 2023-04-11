@@ -6,6 +6,10 @@ import cast_3 from "../../../public/images/cast/cast3.jpg"
 import cast_4 from "../../../public/images/cast/cast4.jpg"
 import cast_5 from "../../../public/images/cast/cast5.jpg"
 import Image from "next/image";
+import Button from "../Button";
+import Rating from "../Rating";
+import Cast from "../Cast";
+import Genre from "../Genre";
 
 
 export default function Slider(){
@@ -23,55 +27,30 @@ export default function Slider(){
                 <div className="flex h-full items-center">
                     <div className="container flex justify-between">
                         <div>
-                            <h1 className="text-5xl md:text-7xl lg:text-6xl font-bold uppercase">Creed iii</h1>
+                            <h1 className="text-4xl md:text-7xl lg:text-5xl font-bold uppercase">Creed iii</h1>
                             <ul className="hidden md:flex gap-4 mt-4 uppercase text-[#b4b3b6]">
-                                <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Action</li>
-                                <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Sport</li>
-                                <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Drama</li>
-                                <li className="border border-[#b4b3b6]  py-1 px-4 rounded-md outline-transparent">Crime</li>
+                                <Genre genre={"Action"}/>
+                                <Genre genre={"Sport"}/>
+                                <Genre genre={"Drama"}/>
+                                <Genre genre={"Crime"}/>
                             </ul>
-                            <p className="text-md md:text-xl my-2">Showing: 7th May 2022 - 24th May 2022</p>
+                            <p className="text-lg my-2">Showing: 7th May 2022 - 24th May 2022</p>
                             <div className="flex items-center mt-8 gap-3">
-                                <p className="h-14 w-14 rounded-full border text-[#b4b3b6] border-[#b4b3b6] text-center pt-3.5 font-semibold">13+</p>
-                                <button className="outline-none bg-[#ffc300] text-md md:text-xl text-[#96031a] p-3 font-semibold rounded-md hover:text-[#ffc300] hover:duration-300 hover:bg-[#96031a] uppercase">Buy Tickets</button>
+                                <Rating rating={"13+"} />
+                                <Button text={"By Tickets"} />
                             </div>
                         </div>
                         <div className="w-3/6 = hidden xl:block">
-                            <p className="text-lg leading-relaxed max-w-3xl">
+                            <p className="text-lg leading-tight max-w-xl">
                                 Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
                             </p>
-                            <h3 className="text-[#ffc300] text-3xl font-medium py-4 uppercase">Casting</h3>
+                            <h3 className="text-[#ffc300] text-2xl font-medium py-4 uppercase">Cast</h3>
                             <ul className="flex gap-6">
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_1} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-medium">Donovan <br/> Albrighton</p>
-                                </li>
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_2} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Michael <br/> B Jordan</p>
-                                </li>
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_3} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Rhoad <br/> Dahl</p>
-                                </li>
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_4} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Lanna <br/> Del Ray</p>
-                                </li>
-                                <li className="">
-                                    <div className="h-20 w-20 rounded-full border overflow-hidden border-transparent">
-                                        <Image src={cast_5} className="object-cover w-full h-full"/>
-                                    </div>
-                                    <p className="text-[#b4b3b6] text-center text-sm mt-2 font-bold">Tommy <br/> Goldman</p>
-                                </li>
+                                <Cast image={cast_1} first_name={"Donovan"} last_names={"Albrighton"}/>
+                                <Cast image={cast_2} first_name={"Michael"} last_names={"B Jordan"}/>
+                                <Cast image={cast_3} first_name={"Rhoad"} last_names={"Dahl"}/>
+                                <Cast image={cast_4} first_name={"Lana"} last_names={"Del Rey"}/>
+                                <Cast image={cast_5} first_name={"Tommy"} last_names={"Goldman"}/>
                             </ul>
                         </div>
                     </div>

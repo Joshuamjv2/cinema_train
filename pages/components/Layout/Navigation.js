@@ -20,12 +20,12 @@ export default function Navigation(){
                 </div>
                 <div className="flex justify-between px-4 md:px-12 items-center py-4 md:py-4 fixed left-0 right-0">
                     <Image src={logo} height={40} className="w-auto h-12 cursor-pointer"/>
-                    <ul className="gap-12 text-xl items-center hidden lg:flex xl:gap-24">
+                    <ul className="gap-8 items-center hidden lg:flex xl:gap-16">
                         <SingleNavItem name={"Home"} />
                         <SingleNavItem name={"Showing"} />
                         <SingleNavItem name={"Coming Soon"} />
                         <SingleNavItem name={"Contact Us"} />
-                        <SingleNavItem name={"Buy Tickets"} />
+                        <SingleNavItem name={"Sign In"} />
                     </ul>
                 </div>
             </nav>
