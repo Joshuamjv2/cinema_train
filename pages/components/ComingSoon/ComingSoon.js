@@ -28,13 +28,13 @@ export default function ComingSoon(){
     }
     return(
         <div style={slider_style} className="flex max-w-xl md:max-w-7xl lg:max-w-screen-2xl">
-            <div className="py-8 px-4 md:px-12 mx-auto">
+            <div className="py-8 px-4 mx-auto md:px-12">
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8 uppercase">Coming Soon</h2>
 
                 {/* Single Coming Soon with details */}
-                <div className="flex flex-col gap-12 md:flex-row justify-between items-start lg:items-end">
+                <div className="flex flex-col gap-0 md:gap-12 md:flex-row justify-between items-start lg:items-end border md:border-none">
                     <Image src={creed} height={600}/>
-                    <div className="text-bold w-4/5">
+                    <div className="p-3 w-full md:w-4/5">
                         <h2 className="uppercase mb-4 font-bold text-5xl">Creed iii*</h2>
                         <ul className="hidden md:flex gap-4 mt-4 uppercase text-[#b4b3b6]">
                             <Genre genre={"Action"}/>
@@ -43,10 +43,10 @@ export default function ComingSoon(){
                             <Genre genre={"Crime"}/>
                         </ul>
                         <p className="text-lg text-[#fbfffe]  my-2">Coming: 24th May, 2023</p>
-                        <p className="text-lg leading-tight max-w-xl py-8">
+                        <p className="text-lg leading-tight max-w-xl py-8 hidden md:block">
                             Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
                         </p>
-                        <ul className="flex gap-6">
+                        <ul className="hidden md:flex gap-6">
                             <Cast image={cast_1} first_name={"Donovan"} last_names={"Albrighton"}/>
                             <Cast image={cast_2} first_name={"Michael"} last_names={"B Jordan"}/>
                             <Cast image={cast_3} first_name={"Rhoad"} last_names={"Dahl"}/>
@@ -63,7 +63,7 @@ export default function ComingSoon(){
                 {/* multiple coming soon to select from */}
                 {/* <div className="pb-8 pt-16 mx-auto px-4 md:px-12"> */}
 
-                <ul className="grid md:grid-cols-3 lg:grid-cols-4 py-16 gap-14">
+                <ul className="gap-4 grid md:grid-cols-3 lg:grid-cols-4 py-8">
                     <SingleComingSoon image={creed} image_height={500} />
                     <SingleComingSoon image={tetris} image_height={500} />
                     <SingleComingSoon image={john_wick} image_height={500} />
