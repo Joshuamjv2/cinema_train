@@ -27,15 +27,15 @@ export default function ComingSoon(){
     "overflow": "hidden"
     }
     return(
-        <div style={slider_style} className="flex max-w-xl md:max-w-7xl lg:max-w-screen-2xl">
-            <div className="py-8 px-4 mx-auto md:px-12">
+        <div style={slider_style} className="flex justify-center">
+            <div className="py-8 px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:max-w-screen-2xl">
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8 uppercase">Coming Soon</h2>
 
                 {/* Single Coming Soon with details */}
                 <div className="flex flex-col gap-0 md:gap-4 lg:gap-8 md:flex-row justify-between items-start md:items-end border md:border-none">
                     <Image src={creed} height={600}/>
-                    <div className="p-3 w-full md:w-4/5">
-                        <h2 className="uppercase mb-4 font-bold text-5xl">Creed iii*</h2>
+                    <div className="p-4 md:p-0 w-full md:w-4/5">
+                        <h2 className="uppercase mb-4 font-bold text-4xl md:text-5xl">Creed iii*</h2>
                         <ul className="hidden md:flex gap-2 lg:gap-4 mt-4 uppercase text-[#b4b3b6] flex-wrap text-sm md:text-base">
                             <Genre genre={"Action"}/>
                             <Genre genre={"Sport"}/>
@@ -43,7 +43,7 @@ export default function ComingSoon(){
                             <Genre genre={"Crime"}/>
                         </ul>
                         <p className="text-sm font-bold my-2 text-[#ffc300] lg:text-base">Coming: 24th May, 2023</p>
-                        <p className="text-lg leading-tight max-w-xl my-2 lg:mt-4  hidden md:block">
+                        <p className="text-lg leading-tight max-w-xs md:max-w-xl my-2 lg:mt-4">
                             Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
                         </p>
                         <ul className="hidden lg:flex gap-6 mt-8">
