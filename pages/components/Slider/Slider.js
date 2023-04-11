@@ -34,7 +34,7 @@ export default function Slider(){
                                 <Genre genre={"Drama"}/>
                                 <Genre genre={"Crime"}/>
                             </ul>
-                            <p className="text-sm font-bold my-2 text-[#ffc300] xl:text-[#fbfffe] lg:text-base">Showing: 7th May 2022 - 24th May 2022</p>
+                            <p className="text-sm font-bold my-2 text-[#ffc300] lg:text-base">Showing: 7th May 2022 - 24th May 2022</p>
                             <p className="xl:hidden text-md leading-tight max-w-lg my-4 md:text-xl">
                                 Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
                             </p>
