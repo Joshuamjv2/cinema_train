@@ -32,11 +32,11 @@ export default function ComingSoon(){
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8 uppercase">Coming Soon</h2>
 
                 {/* Single Coming Soon with details */}
-                <div className="flex flex-col gap-0 md:gap-4 lg:gap-8 md:flex-row justify-between items-start md:items-end border md:border-none">
+                <div className="flex flex-col gap-0 md:gap-4 lg:gap-12 xl:gap-16 md:flex-row justify-between items-start md:items-end border md:border-none">
                     <Image src={creed} height={600}/>
                     <div className="p-4 md:p-0 w-full md:w-4/5">
-                        <h2 className="uppercase mb-4 font-bold text-4xl md:text-5xl">Creed iii*</h2>
-                        <ul className="hidden md:flex gap-2 lg:gap-4 mt-4 uppercase text-[#b4b3b6] flex-wrap text-sm md:text-base">
+                        <h2 className="uppercase mb-4 font-bold text-4xl md:text-5xl">Creed iii</h2>
+                        <ul className="flex gap-2 lg:gap-4 mt-4 uppercase text-[#b4b3b6] flex-wrap text-sm md:text-base">
                             <Genre genre={"Action"}/>
                             <Genre genre={"Sport"}/>
                             <Genre genre={"Drama"}/>
