@@ -28,19 +28,22 @@ export default function Slider(){
                     <div className="container flex justify-between">
                         <div>
                             <h1 className="text-4xl md:text-7xl lg:text-5xl font-bold uppercase">Creed iii</h1>
-                            <ul className="hidden md:flex gap-4 mt-4 uppercase text-[#b4b3b6]">
+                            <ul className="flex gap-2 lg:gap-4 mt-4 uppercase text-[#b4b3b6] flex-wrap text-sm lg:text-base">
                                 <Genre genre={"Action"}/>
                                 <Genre genre={"Sport"}/>
                                 <Genre genre={"Drama"}/>
                                 <Genre genre={"Crime"}/>
                             </ul>
-                            <p className="text-lg my-2">Showing: 7th May 2022 - 24th May 2022</p>
+                            <p className="text-sm font-bold my-2 text-[#ffc300] xl:text-[#fbfffe] lg:text-base">Showing: 7th May 2022 - 24th May 2022</p>
+                            <p className="xl:hidden text-md leading-tight max-w-lg my-4 md:text-xl">
+                                Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
+                            </p>
                             <div className="flex items-center mt-8 gap-3">
                                 <Rating rating={"13+"} />
                                 <Button text={"By Tickets"} />
                             </div>
                         </div>
-                        <div className="w-3/6 = hidden xl:block">
+                        <div className="w-3/6 hidden xl:block">
                             <p className="text-lg leading-tight max-w-xl">
                                 Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
                             </p>

@@ -32,21 +32,21 @@ export default function ComingSoon(){
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8 uppercase">Coming Soon</h2>
 
                 {/* Single Coming Soon with details */}
-                <div className="flex flex-col gap-0 md:gap-12 md:flex-row justify-between items-start lg:items-end border md:border-none">
+                <div className="flex flex-col gap-0 md:gap-4 lg:gap-8 md:flex-row justify-between items-start md:items-end border md:border-none">
                     <Image src={creed} height={600}/>
                     <div className="p-3 w-full md:w-4/5">
                         <h2 className="uppercase mb-4 font-bold text-5xl">Creed iii*</h2>
-                        <ul className="hidden md:flex gap-4 mt-4 uppercase text-[#b4b3b6]">
+                        <ul className="hidden md:flex gap-2 lg:gap-4 mt-4 uppercase text-[#b4b3b6] flex-wrap text-sm md:text-base">
                             <Genre genre={"Action"}/>
                             <Genre genre={"Sport"}/>
                             <Genre genre={"Drama"}/>
                             <Genre genre={"Crime"}/>
                         </ul>
-                        <p className="text-lg text-[#fbfffe]  my-2">Coming: 24th May, 2023</p>
-                        <p className="text-lg leading-tight max-w-xl py-8 hidden md:block">
+                        <p className="text-sm font-bold my-2 text-[#ffc300] lg:text-base">Coming: 24th May, 2023</p>
+                        <p className="text-lg leading-tight max-w-xl my-2 lg:mt-4  hidden md:block">
                             Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
                         </p>
-                        <ul className="hidden md:flex gap-6">
+                        <ul className="hidden lg:flex gap-6 mt-8">
                             <Cast image={cast_1} first_name={"Donovan"} last_names={"Albrighton"}/>
                             <Cast image={cast_2} first_name={"Michael"} last_names={"B Jordan"}/>
                             <Cast image={cast_3} first_name={"Rhoad"} last_names={"Dahl"}/>
