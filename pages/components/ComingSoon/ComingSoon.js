@@ -28,7 +28,8 @@ export default function ComingSoon(){
     }
     return(
         <div style={slider_style} className="flex justify-center">
-            <div className="py-8 px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:max-w-screen-2xl">
+        {/* py-8 px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:max-w-screen-2xl */}
+            <div className="py-8 px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container">
                 <h2 className="text-4xl font-bold text-[#ffc300] py-8 uppercase">Coming Soon</h2>
 
                 {/* Single Coming Soon with details */}
@@ -63,10 +64,12 @@ export default function ComingSoon(){
                 {/* multiple coming soon to select from */}
                 {/* <div className="pb-8 pt-16 mx-auto px-4 md:px-12"> */}
 
-                <ul className="gap-4 md:gap-8 grid md:grid-cols-3 lg:grid-cols-4 py-16">
+                <ul className="gap-4 md:gap-8 md:grid md:grid-cols-4 lg:grid-cols-6 py-16 hidden">
                     <SingleComingSoon image={creed} image_height={500} />
                     <SingleComingSoon image={tetris} image_height={500} />
                     <SingleComingSoon image={john_wick} image_height={500} />
+                    <SingleComingSoon image={dungeons_dragons} image_height={500} />
+                    <SingleComingSoon image={tetris} image_height={500} />
                     <SingleComingSoon image={dungeons_dragons} image_height={500} />
                 </ul>
                 {/* </div> */}

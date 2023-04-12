@@ -4,6 +4,7 @@ import Slider from './components/Slider/Slider'
 import Showing from './components/Showing/Showing'
 import ComingSoon from './components/ComingSoon/ComingSoon'
 import Layout from './components/Layout/Layout'
+import Gallery from './components/Gallery/Gallery'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function Home() {
         <Slider />
         <Showing />
         <ComingSoon />
+        {/* <Gallery /> */}
       </Layout>
     </div>
   )
