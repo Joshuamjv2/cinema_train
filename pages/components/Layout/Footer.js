@@ -4,8 +4,8 @@ import Button from "../Button"
 
 export default function Footer(){
     return(
-        <div className="flex text-[#fbfffe]">
-            <div className="py-8 px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container">
+        <div className="flex bg-[#fbfffe] text-[#000]">
+            <div className="pt-16 px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container">
             <div className="flex flex-col md:flex-row items-center gap-16">
                     <div className="hidden md:block">
                         <Image src={community} height={500} className="rounded-lg"/>
@@ -16,8 +16,8 @@ export default function Footer(){
                         <Button text={"Join the community"}/>
                     </div>
                 </div>
-                <hr className="mt-16" />
-                <ul className="flex justify-between pt-16 pb-8 flex-col md:flex-row gap-8">
+                {/* <hr className="my-16" /> */}
+                <ul className="flex pt-16 justify-between flex-col md:flex-row gap-8">
                     <li>
                         <h4 className="text-lg font-semibold uppercase text-[#96031a] pb-2">
                             Wanna Contact Us?
@@ -45,6 +45,11 @@ export default function Footer(){
                         <Button text={"Sign In"}/>
                     </li>
                 </ul>
+                <hr className="mt-16" />
+                <div className="py-8 md:text-center">
+                    <p><span className="font-semibold text-[#96031a]">Muwanguzi Joshua</span> &copy; {new Date().getFullYear()}</p>
+                    <p></p>
+                </div>
             </div>
         </div>
     )
