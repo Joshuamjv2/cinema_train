@@ -23,8 +23,8 @@ export default function Footer(){
                             Wanna Contact Us?
                         </h4>
                         <p className="font-thin">You can reach us by phone or email</p>
-                        <p className="font-thin">Phone: <span className="text-lg font-thin text-[#ffc300]">+256758438885</span></p>
-                        <p className="font-thin">Email: <span className="text-lg font-thin text-[#ffc300]">joshuamjv22@gmail.com</span></p>
+                        <p className="font-thin">Phone: <span className="text-lg font-semibold text-[#ffc300]">+(256) 758 438885</span></p>
+                        <p className="font-thin">Email: <span className="text-lg font-semibold text-[#ffc300]">joshuamjv22@gmail.com</span></p>
                     </li>
                     <li>
                         <h4 className="text-lg font-semibold pb-2 uppercase text-[#96031a]">
@@ -47,7 +47,7 @@ export default function Footer(){
                 </ul>
                 <hr className="mt-16" />
                 <div className="py-8 md:text-center">
-                    <p><span className="font-semibold text-[#96031a]">Muwanguzi Joshua</span> &copy; {new Date().getFullYear()}</p>
+                    <p>&copy; {new Date().getFullYear()} <span className="font-semibold text-[#96031a]">Muwanguzi Joshua</span></p>
                     <p></p>
                 </div>
             </div>
