@@ -5,7 +5,7 @@ import Showing from './components/Showing/Showing'
 import ComingSoon from './components/ComingSoon/ComingSoon'
 import Layout from './components/Layout/Layout'
 import Gallery from './components/Gallery/Gallery'
-import api_config from './requests'
+import { api_config } from '@/requests'
 
 const inter = Inter({ subsets: ['latin'] })
 
