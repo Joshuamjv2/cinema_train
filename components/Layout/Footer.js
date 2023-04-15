@@ -1,5 +1,5 @@
 import Image from "next/image"
-import community from "../../../public/images/general/community.jpg"
+import community from "../../public/images/general/community.jpg"
 import Button from "../Button"
 
 export default function Footer(){

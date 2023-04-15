@@ -1,10 +1,10 @@
 import SingleGallery from "./SingleGallery";
-import image1 from "../../../public/images/gallery/1.jpg"
-import image2 from "../../../public/images/gallery/2.webp"
-import image3 from "../../../public/images/gallery/3.avif"
-import image4 from "../../../public/images/gallery/4.jpg"
-import image5 from "../../../public/images/gallery/5.jpg"
-import image6 from "../../../public/images/gallery/6.png"
+import image1 from "../../public/images/gallery/1.jpg"
+import image2 from "../../public/images/gallery/2.webp"
+import image3 from "../../public/images/gallery/3.avif"
+import image4 from "../../public/images/gallery/4.jpg"
+import image5 from "../../public/images/gallery/5.jpg"
+import image6 from "../../public/images/gallery/6.png"
 
 export default function JoinUs(){
     return(

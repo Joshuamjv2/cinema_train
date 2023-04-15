@@ -1,9 +1,10 @@
 import Image from "next/image"
-import cast_1 from "../../../public/images/cast/cast1.jpg"
-import cast_2 from "../../../public/images/cast/cast2.jpg"
-import cast_3 from "../../../public/images/cast/cast3.jpg"
-import cast_4 from "../../../public/images/cast/cast4.jpg"
-import cast_5 from "../../../public/images/cast/cast5.jpg"
+// import cast9 from "../../"
+import cast_1 from "../../public/images/cast/cast1.jpg"
+import cast_2 from "../../public/images/cast/cast2.jpg"
+import cast_3 from "../../public/images/cast/cast3.jpg"
+import cast_4 from "../../public/images/cast/cast4.jpg"
+import cast_5 from "../../public/images/cast/cast5.jpg"
 import { useState } from "react"
 
 import Genre from "../Genre"
@@ -11,10 +12,6 @@ import Button from "../Button"
 import Rating from "../Rating"
 import Cast from "../Cast"
 
-import creed from "../../../public/images/showing/creed.jpg"
-import john_wick from "../../../public/images/showing/john_wick4.jpg"
-import tetris from "../../../public/images/showing/tetris.jpg"
-import dungeons_dragons from "../../../public/images/showing/dungeons_dragons.jpg"
 import SingleComingSoon from "./SingleComingSoon"
 
 
@@ -47,15 +44,15 @@ export default function ComingSoon({coming_soon}){
                 {/* Single Coming Soon with details */}
                 <div className="flex flex-col gap-0 md:gap-4 lg:gap-12 xl:gap-16 md:flex-row justify-between items-start md:items-end border md:border-none">
                 <div>
-                    <Image src={`https://image.tmdb.org/t/p/original${main.poster_path}`} width={350} height={100} style={{"object-fit": "fill", "width": "100%", "height": "auto"}}/>
+                    <Image src={`https://image.tmdb.org/t/p/original${main.poster_path}`} width={350} height={100} style={{"objectFit": "fill", "width": "100%", "height": "auto"}}/>
                 </div>
                     <div className="p-4 md:p-0 w-full md:w-4/5">
                         <h2 className="uppercase mb-4 font-bold text-4xl md:text-5xl">{main.title}</h2>
                         <ul className="flex gap-2 lg:gap-4 mt-4 uppercase text-[#b4b3b6] flex-wrap text-sm md:text-base">
-                            <Genre genre={"Action"}/>
-                            <Genre genre={"Sport"}/>
-                            <Genre genre={"Drama"}/>
-                            <Genre genre={"Crime"}/>
+                            <Genre key={"name"} genre={"Action"}/>
+                            <Genre key={"name2"} genre={"Sport"}/>
+                            <Genre key={"name3"} genre={"Drama"}/>
+                            <Genre key={"name4"} genre={"Crime"}/>
                         </ul>
                         <p className="text-sm font-bold my-2 text-[#ffc300] lg:text-base">Coming: {main.release_date}</p>
                         <p className="text-lg leading-tight max-w-xs md:max-w-xl my-2 lg:mt-4">

@@ -1,9 +1,9 @@
 import Navigation from "../Layout/Navigation";
-import cast_1 from "../../../public/images/cast/cast1.jpg"
-import cast_2 from "../../../public/images/cast/cast2.jpg"
-import cast_3 from "../../../public/images/cast/cast3.jpg"
-import cast_4 from "../../../public/images/cast/cast4.jpg"
-import cast_5 from "../../../public/images/cast/cast5.jpg"
+import cast_1 from "../../public/images/cast/cast1.jpg"
+import cast_2 from "../../public/images/cast/cast2.jpg"
+import cast_3 from "../../public/images/cast/cast3.jpg"
+import cast_4 from "../../public/images/cast/cast4.jpg"
+import cast_5 from "../../public/images/cast/cast5.jpg"
 import Button from "../Button";
 import Rating from "../Rating";
 import Cast from "../Cast";
@@ -14,9 +14,9 @@ import { useState } from "react";
 export default function Slider({showing}){
     const movies = showing.results.slice(0, 6)
     const [current, setCurrent] = useState(movies[0])
-    const bg_image = `https://image.tmdb.org/t/p/original${current.backdrop_path}`
+    // const bg_image = `https://image.tmdb.org/t/p/original${current.backdrop_path}`
     const slider_style = {
-    'backgroundImage':`linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${bg_image})`,
+    'backgroundImage':`linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://image.tmdb.org/t/p/original${current.backdrop_path})`,
     'backgroundSize': 'cover',
     'backgroundRepeat': 'no-repeat',
     'backgroundPosition': 'top',

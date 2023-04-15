@@ -1,10 +1,4 @@
-import SingleMovie from "../SingleMovie"
-import creed from "../../../public/images/showing/creed.jpg"
-import john_wick from "../../../public/images/showing/john_wick4.jpg"
-import tetris from "../../../public/images/showing/tetris.jpg"
-import dungeons_dragons from "../../../public/images/showing/dungeons_dragons.jpg"
-
-
+import SingleMovie from "./SingleMovie"
 export default function Showing({showing}){
     const movies = showing.results.slice(0,8)
     return(
@@ -15,7 +9,6 @@ export default function Showing({showing}){
                     {movies.map((movie) => 
                         <SingleMovie key={movie.id} image={`https://image.tmdb.org/t/p/original${movie.poster_path}`} image_width={400} image_height={500} />
                     )}
-                    
                     {/* <SingleMovie image={tetris} image_height={500} />
                     <SingleMovie image={john_wick} image_height={500} />
                     <SingleMovie image={dungeons_dragons} image_height={500} /> */}

@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-import Slider from './components/Slider/Slider'
-import Showing from './components/Showing/Showing'
-import ComingSoon from './components/ComingSoon/ComingSoon'
-import Layout from './components/Layout/Layout'
-import Gallery from './components/Gallery/Gallery'
+import Slider from '@/components/Slider/Slider'
+import Showing from '@/components/Showing/Showing'
+import ComingSoon from '@/components/ComingSoon/ComingSoon'
+import Layout from '@/components/Layout/Layout'
+import SingleGallery from '@/components/Gallery/SingleGallery'
 import { api_config } from '@/requests'
 
 const inter = Inter({ subsets: ['latin'] })

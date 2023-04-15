@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../../public/images/logos/svg/logo_image_full.svg";
+import logo from "../../public/images/logos/svg/logo_image_full.svg";
 import SingleNavItem from "./SingleNavItem.js/SingleNavItem";
 import { useState, useEffect } from "react";
 
