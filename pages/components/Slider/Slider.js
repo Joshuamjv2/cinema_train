@@ -1,42 +1,45 @@
-import Layout from "../Layout/Layout";
 import Navigation from "../Layout/Navigation";
 import cast_1 from "../../../public/images/cast/cast1.jpg"
 import cast_2 from "../../../public/images/cast/cast2.jpg"
 import cast_3 from "../../../public/images/cast/cast3.jpg"
 import cast_4 from "../../../public/images/cast/cast4.jpg"
 import cast_5 from "../../../public/images/cast/cast5.jpg"
-import Image from "next/image";
 import Button from "../Button";
 import Rating from "../Rating";
 import Cast from "../Cast";
 import Genre from "../Genre";
+import { useState } from "react";
 
 
-export default function Slider(){
+export default function Slider({showing}){
+    const movies = showing.results.slice(0, 6)
+    const [current, setCurrent] = useState(movies[0])
+    const bg_image = `https://image.tmdb.org/t/p/original${current.backdrop_path}`
     const slider_style = {
-    'backgroundImage':"linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/images/bg/creed.jpg')",
+    'backgroundImage':`linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${bg_image})`,
     'backgroundSize': 'cover',
     'backgroundRepeat': 'no-repeat',
     'backgroundPosition': 'top',
     'height': '100vh',
     "overflow": "hidden"
     }
+
     return (
         <div className="" style={slider_style}>
                 <Navigation />
                 <div className="flex h-full items-center">
                     <div className="container flex justify-between">
                         <div>
-                            <h1 className="text-4xl md:text-7xl lg:text-5xl font-bold uppercase">Creed iii</h1>
+                            <h1 className="text-4xl md:text-7xl lg:text-5xl font-bold uppercase">{current.original_title}</h1>
                             <ul className="flex gap-2 lg:gap-4 mt-4 uppercase text-[#b4b3b6] flex-wrap text-sm lg:text-base">
                                 <Genre genre={"Action"}/>
                                 <Genre genre={"Sport"}/>
                                 <Genre genre={"Drama"}/>
                                 <Genre genre={"Crime"}/>
                             </ul>
-                            <p className="text-sm font-bold my-2 text-[#ffc300] lg:text-base">Showing: 7th May 2022 - 24th May 2022</p>
+                            <p className="text-sm font-bold my-2 text-[#ffc300] lg:text-base">Showing from: {current.release_date}</p>
                             <p className="xl:hidden text-md leading-tight max-w-lg my-4 md:text-xl">
-                                Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
+                                {current.overview}
                             </p>
                             <div className="flex items-center mt-8 gap-3">
                                 <Rating rating={"13+"} />
@@ -45,7 +48,7 @@ export default function Slider(){
                         </div>
                         <div className="w-3/6 hidden xl:block">
                             <p className="text-lg leading-tight max-w-xl">
-                                Adonis has been thriving in both his career and family life, but when a childhood friend and former boxing prodigy resurfaces, the face-off is more than just a fight.
+                                {current.overview}
                             </p>
                             <h3 className="text-[#ffc300] text-2xl font-medium py-4 uppercase">Cast</h3>
                             <ul className="flex gap-6">
