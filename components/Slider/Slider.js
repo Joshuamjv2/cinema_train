@@ -12,7 +12,7 @@ import { useState } from "react";
 
 
 export default function Slider({showing}){
-    const movies = showing.results.slice(0, 6)
+    const movies = showing.slice(0, 6)
     const [current, setCurrent] = useState(movies[0])
     // const bg_image = `https://image.tmdb.org/t/p/original${current.backdrop_path}`
     const slider_style = {
@@ -32,10 +32,9 @@ export default function Slider({showing}){
                         <div>
                             <h1 className="text-4xl md:text-7xl lg:text-5xl font-bold uppercase">{current.original_title}</h1>
                             <ul className="flex gap-2 lg:gap-4 mt-4 uppercase text-[#b4b3b6] flex-wrap text-sm lg:text-base">
-                                <Genre genre={"Action"}/>
-                                <Genre genre={"Sport"}/>
-                                <Genre genre={"Drama"}/>
-                                <Genre genre={"Crime"}/>
+                                {current.genre_ids.map((i)=>
+                                    <Genre key={i.id} genre={i.name}/>
+                                )}
                             </ul>
                             <p className="text-sm font-bold my-2 text-[#ffc300] lg:text-base">Showing from: {current.release_date}</p>
                             <p className="xl:hidden text-md leading-tight max-w-lg my-4 md:text-xl">
@@ -52,11 +51,13 @@ export default function Slider({showing}){
                             </p>
                             <h3 className="text-[#ffc300] text-2xl font-medium py-4 uppercase">Cast</h3>
                             <ul className="flex gap-6">
-                                <Cast image={cast_1} first_name={"Donovan"} last_names={"Albrighton"}/>
-                                <Cast image={cast_2} first_name={"Michael"} last_names={"B Jordan"}/>
-                                <Cast image={cast_3} first_name={"Rhoad"} last_names={"Dahl"}/>
-                                <Cast image={cast_4} first_name={"Lana"} last_names={"Del Rey"}/>
-                                <Cast image={cast_5} first_name={"Tommy"} last_names={"Goldman"}/>
+                                {current.cast.map((cast_member)=>{
+                                    const name_one = cast_member.original_name.split(" ")[0]
+                                    const name_two = cast_member.original_name.replace(name_one+"", "")
+                                    const profile_image = `https://image.tmdb.org/t/p/original${cast_member.profile_path}`
+                                    return <Cast key={cast_member.id} image={profile_image} first_name={name_one} last_names={name_two}/>
+                                }
+                                )}
                             </ul>
                         </div>
                     </div>

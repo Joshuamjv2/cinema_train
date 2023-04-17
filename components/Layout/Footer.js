@@ -1,10 +1,11 @@
 import Image from "next/image"
 import community from "../../public/images/general/community.jpg"
 import Button from "../Button"
+import Link from "next/link"
 
 export default function Footer(){
     return(
-        <div className="flex bg-[#fbfffe] text-[#000]">
+        <div className="flex bg-[#fbfffe] text-[#000] pt-8" id="community">
             <div className="pt-16 px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container">
             <div className="flex flex-col md:flex-row items-center gap-16">
                     <div className="hidden md:block">
@@ -15,10 +16,10 @@ export default function Footer(){
                         <p className="max-w-2xl pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia similique nam consequuntur illum veritatis distinctio! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, a.<br/><br /> Qui rem laborum asperiores repudiandae, nemo recusandae impedit dolorum! Velit officiis commodi maxime vitae? Perferendis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, eligendi. Eligendi, rem odit doloremque dolores animi alias in aliquid unde atque, id error sed, quibusdam rerum exercitationem molestiae quo laudantium.</p>
                         <Button text={"Join the community"}/>
                     </div>
-                </div>
+            </div>
                 {/* <hr className="my-16" /> */}
                 <ul className="flex pt-16 justify-between flex-col md:flex-row gap-8">
-                    <li>
+                    <li id="contact">
                         <h4 className="text-lg font-semibold uppercase text-[#96031a] pb-2">
                             Wanna Contact Us?
                         </h4>
@@ -31,10 +32,10 @@ export default function Footer(){
                             Navigation
                         </h4>
                         <ul className="text-md font-thin gap-3 flex flex-col">
-                            <li className="cursor-pointer hover:text-[#ffc300] duration-300">Home</li>
-                            <li className="cursor-pointer hover:text-[#ffc300] duration-300">Showing</li>
-                            <li className="cursor-pointer hover:text-[#ffc300] duration-300">Coming soon</li>
-                            <li className="cursor-pointer hover:text-[#ffc300] duration-300">Contact us</li>
+                            <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"/"}>Home</Link></li>
+                            <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#now_showing"}>Showing</Link></li>
+                            <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#coming_soon"}>Coming Soon</Link></li>
+                            <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#contact"}>Contact Us</Link></li>
                         </ul>
                     </li>
                     <li>
@@ -42,7 +43,7 @@ export default function Footer(){
                             Follow Us
                         </h4>
                         <p className="pb-8">Socials coming soon</p>
-                        <Button text={"Sign In"}/>
+                        <Link href="/"><Button text={"Sign In"}/></Link>
                     </li>
                 </ul>
                 <hr className="mt-16" />

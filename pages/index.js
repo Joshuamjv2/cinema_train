@@ -32,13 +32,48 @@ export default function Home({upcoming_data, now_showing_data}) {
 }
 
 export async function getServerSideProps() {
-  const upcoming = await fetch(`${api_config.endpoint}/upcoming?api_key=${api_config.apiKey}&language=en-US&page=1&region=US`)
 
-  const upcoming_data = await upcoming.json()
+  // genre is universal so we get it and map the movie genre IDs accordingly
+  let genre = await fetch(`${api_config.genre_endpoint}`)
+  genre = await genre.json()
 
-  const now_showing = await fetch(`${api_config.endpoint}/now_playing?api_key=${api_config.apiKey}&language=en-US&page=1&region=US`)
+  // get movie credit and set genre
+  const getCreditsAndGenres = async (movies) => {
+    // credits
+      for (let i = 0; i < movies.length; i++){
+      // get credits
+      let credits = await fetch(`${api_config.movies_endpoint}/${movies[i].id}/credits?api_key=${api_config.apiKey}&language=en-US`)
+      // set credits
+      credits = await credits.json()
+      movies[i].cast = credits.cast.slice(0, 5)
 
-  const now_showing_data = await now_showing.json()
+      // set genre
+      for (let mg = 0; mg < movies[i].genre_ids.length; mg++){
+        for (let g = 0; g < genre.genres.length; g++){
+          if (genre.genres[g].id === movies[i].genre_ids[mg]){
+              movies[i].genre_ids[mg] = genre.genres[g]
+          }
+        }
+      }
+      // end set genre
+    }
+    return movies
+  }
+
+  // get upcoming movies
+  const upcoming = await fetch(`${api_config.movies_endpoint}/upcoming?api_key=${api_config.apiKey}&language=en-US&page=1&region=US`)
+  let upcoming_data = await upcoming.json()
+  // take the first 6 upcoming movies
+  upcoming_data = upcoming_data.results.slice(0, 6)
+
+  // get now showing movies
+  const now_showing = await fetch(`${api_config.movies_endpoint}/now_playing?api_key=${api_config.apiKey}&language=en-US&page=1&region=US`)
+  let now_showing_data = await now_showing.json()
+  // take the first 8 now showing movies
+  now_showing_data = now_showing_data.results.slice(0, 8)
+
+  now_showing_data = await getCreditsAndGenres(now_showing_data)
+  upcoming_data = await getCreditsAndGenres(upcoming_data)
 
   return {
     props: { now_showing_data, upcoming_data }
