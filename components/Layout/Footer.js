@@ -2,8 +2,7 @@ import Image from "next/image"
 import community from "../../public/images/general/community.jpg"
 import Button from "../Button"
 import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function Footer(){
     return(
@@ -20,16 +19,16 @@ export default function Footer(){
                     </div>
             </div>
                 {/* <hr className="my-16" /> */}
-                <div className="flex pt-16 justify-between flex-col md:flex-row gap-8">
-                    <div id="contact">
+                <ul className="flex pt-16 justify-between flex-col md:flex-row gap-8">
+                    <li id="contact">
                         <h4 className="text-lg font-semibold uppercase text-[#96031a] pb-2">
                             Contact Us
                         </h4>
-                        {/* <p className="font-thin">You can reach us by phone or email</p> */}
+                        <p className="font-thin">You can reach us by phone or email</p>
                         <p className="font-thin">Phone: <span className="text-lg font-semibold text-[#ffc300]">+(256) 758 438885</span></p>
                         <p className="font-thin">Email: <span className="text-lg font-semibold text-[#ffc300]">joshuamjv22@gmail.com</span></p>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <h4 className="text-lg font-semibold pb-2 uppercase text-[#96031a]">
                             Navigation
                         </h4>
@@ -39,25 +38,19 @@ export default function Footer(){
                             <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#coming_soon"}>Coming Soon</Link></li>
                             <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#contact"}>Contact Us</Link></li>
                         </ul>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <h4 className="text-lg font-semibold pb-2 uppercase text-[#96031a]">
                             Follow Us
                         </h4>
-
-                        <ul className='flex gap-3 justify-start'>
-                            <li><FontAwesomeIcon icon={['fab', 'facebook']} style={{ fontSize: 10 }} /></li>
-
-                            <li><FontAwesomeIcon icon={['fab', 'instagram']} style={{ fontSize: 10 }} /></li>
-
-                            <li><FontAwesomeIcon icon={['fab', 'twitter']} style={{ fontSize: 10 }} /></li>
-
-                            <li><FontAwesomeIcon icon={['fab', 'reddit']} style={{ fontSize: 10 }} /></li>
-                        </ul>
-
+                        <div className="flex h-6 gap-4 mb-4">
+                            <FontAwesomeIcon icon={["fab", "facebook"]} style={{fontSize: 15, color: "#96031a"}} className="hover:scale-110 hover:duration-300" />
+                            <FontAwesomeIcon icon={["fab", "reddit"]} style={{fontSize: 15, color: "#96031a"}} className="hover:scale-110 hover:duration-300" />
+                            <FontAwesomeIcon icon={["fab", "instagram"]} style={{fontSize: 15, color: "#96031a"}} className="hover:scale-110 hover:duration-300" />
+                        </div>
                         <Link href="/"><Button text={"Sign In"}/></Link>
-                    </div>
-                </div>
+                    </li>
+                </ul>
                 <hr className="mt-16" />
                 <div className="py-8 md:text-center">
                     <p>&copy; {new Date().getFullYear()} <span className="font-semibold text-[#96031a]">Muwanguzi Joshua</span></p>
