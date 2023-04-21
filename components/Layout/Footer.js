@@ -24,7 +24,7 @@ export default function Footer(){
                         <h4 className="text-lg font-semibold uppercase text-[#96031a] pb-2">
                             Contact Us
                         </h4>
-                        <p className="font-thin">You can reach us by phone or email</p>
+                        {/* <p className="font-thin">You can reach us by phone or email</p> */}
                         <p className="font-thin">Phone: <span className="text-lg font-semibold text-[#ffc300]">+(256) 758 438885</span></p>
                         <p className="font-thin">Email: <span className="text-lg font-semibold text-[#ffc300]">joshuamjv22@gmail.com</span></p>
                     </li>
