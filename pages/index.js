@@ -7,6 +7,13 @@ import Layout from '@/components/Layout/Layout'
 import SingleGallery from '@/components/Gallery/SingleGallery'
 import { api_config } from '@/requests'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+
+library.add(fab, far, fas)
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({upcoming_data, now_showing_data}) {

@@ -2,10 +2,12 @@ import Image from "next/image"
 import community from "../../public/images/general/community.jpg"
 import Button from "../Button"
 import Link from "next/link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer(){
     return(
-        <div className="flex bg-[#fbfffe] text-[#000] pt-8" id="community">
+        <div className="flex bg-[#fbfffe] text-[#000] md:pt-8" id="community">
             <div className="pt-16 px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container">
             <div className="flex flex-col md:flex-row items-center gap-16">
                     <div className="hidden md:block">
@@ -18,16 +20,16 @@ export default function Footer(){
                     </div>
             </div>
                 {/* <hr className="my-16" /> */}
-                <ul className="flex pt-16 justify-between flex-col md:flex-row gap-8">
-                    <li id="contact">
+                <div className="flex pt-16 justify-between flex-col md:flex-row gap-8">
+                    <div id="contact">
                         <h4 className="text-lg font-semibold uppercase text-[#96031a] pb-2">
-                            Wanna Contact Us?
+                            Contact Us
                         </h4>
-                        <p className="font-thin">You can reach us by phone or email</p>
+                        {/* <p className="font-thin">You can reach us by phone or email</p> */}
                         <p className="font-thin">Phone: <span className="text-lg font-semibold text-[#ffc300]">+(256) 758 438885</span></p>
                         <p className="font-thin">Email: <span className="text-lg font-semibold text-[#ffc300]">joshuamjv22@gmail.com</span></p>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <h4 className="text-lg font-semibold pb-2 uppercase text-[#96031a]">
                             Navigation
                         </h4>
@@ -37,15 +39,25 @@ export default function Footer(){
                             <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#coming_soon"}>Coming Soon</Link></li>
                             <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#contact"}>Contact Us</Link></li>
                         </ul>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <h4 className="text-lg font-semibold pb-2 uppercase text-[#96031a]">
                             Follow Us
                         </h4>
-                        <p className="pb-8">Socials coming soon</p>
+
+                        <ul className='flex gap-3 justify-start'>
+                            <li><FontAwesomeIcon icon={['fab', 'facebook']} style={{ fontSize: 10 }} /></li>
+
+                            <li><FontAwesomeIcon icon={['fab', 'instagram']} style={{ fontSize: 10 }} /></li>
+
+                            <li><FontAwesomeIcon icon={['fab', 'twitter']} style={{ fontSize: 10 }} /></li>
+
+                            <li><FontAwesomeIcon icon={['fab', 'reddit']} style={{ fontSize: 10 }} /></li>
+                        </ul>
+
                         <Link href="/"><Button text={"Sign In"}/></Link>
-                    </li>
-                </ul>
+                    </div>
+                </div>
                 <hr className="mt-16" />
                 <div className="py-8 md:text-center">
                     <p>&copy; {new Date().getFullYear()} <span className="font-semibold text-[#96031a]">Muwanguzi Joshua</span></p>
