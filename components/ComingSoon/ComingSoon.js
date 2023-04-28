@@ -50,7 +50,7 @@ export default function ComingSoon({coming_soon}){
                         <p className="text-lg leading-tight max-w-xs md:max-w-xl my-2 lg:mt-4">
                             {main.overview}
                         </p>
-                        <ul className="hidden lg:flex gap-6 mt-8">
+                        {/* <ul className="hidden lg:flex gap-6 mt-8">
                             {main.cast.map((main_member)=>{
                                 const name_one = main_member.original_name.split(" ")[0]
                                 const name_two = main_member.original_name.replace(name_one+"", "")
@@ -58,7 +58,7 @@ export default function ComingSoon({coming_soon}){
                                 return <Cast key={main_member.id} image={profile_image} first_name={name_one} last_names={name_two}/>
                                 }
                             )}
-                        </ul>
+                        </ul> */}
                         <div className="flex items-center gap-3 mt-8">
                             <Rating rating={main.adult ? "18+": "PG"}/>
                             <Button text={"Book Tickets"}/>
