@@ -3,6 +3,7 @@ import logo from "../../public/images/logos/svg/logo_image_full.svg";
 import SingleNavItem from "./SingleNavItem.js/SingleNavItem";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { login, init_login } from "@/pages/api/auth";
 
 export default function Navigation(){
     const [clientWindowHeight, setClientWindowHeight] = useState("");
@@ -17,6 +18,10 @@ export default function Navigation(){
     const handleScroll = () => {
         setClientWindowHeight(window.scrollY);
     };
+
+    const handleBtnClick = () => {
+        init_login()
+    }
 
     useEffect(() => {
         let backgroundTransparacyVar = (clientWindowHeight / 1000);
@@ -35,7 +40,9 @@ export default function Navigation(){
                         <SingleNavItem name={"Coming Soon"} path={"#coming_soon"} />
                         <SingleNavItem name={"The Community"} path={"#community"} />
                         <SingleNavItem name={"Contact Us"} path={"#contact"} />
-                        <SingleNavItem name={"Sign In"} path={"/"} />
+                        <div onClick={handleBtnClick}>
+                            <SingleNavItem name={"Sign In"} path={"/"}/>
+                        </div>
                     </ul>
             </nav>
         </div>

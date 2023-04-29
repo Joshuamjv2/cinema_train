@@ -4,8 +4,9 @@ import Slider from '@/components/Slider/Slider'
 import Showing from '@/components/Showing/Showing'
 import ComingSoon from '@/components/ComingSoon/ComingSoon'
 import Layout from '@/components/Layout/Layout'
-import SingleGallery from '@/components/Gallery/SingleGallery'
+// import SingleGallery from '@/components/Gallery/SingleGallery'
 import { api_config } from '@/requests'
+import { login } from './api/auth'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -17,6 +18,16 @@ library.add(fab, far, fas)
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({upcoming_data, now_showing_data}) {
+
+  if (typeof window !== "undefined") {
+    let params = (new URL(document.location)).searchParams;
+    let success = params.get("success");
+    if (success){
+      let user_id = params.get("id")
+      login(user_id)
+    }
+  }
+
   return (
     <div className=''>
       <Head>
