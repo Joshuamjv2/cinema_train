@@ -1,7 +1,4 @@
-import { url } from "./url";
-
-
-async function makeGetRequest(req_url, headers = {
+export async function makeGetRequest(req_url, headers = {
     "Content-Type": "application/json"
     }) {
         // Default options are marked with *
@@ -22,16 +19,24 @@ async function makeGetRequest(req_url, headers = {
 //   console.log(data); // JSON data parsed by `data.json()` call
 // });
 
-export  async function init_login(){
-    makeGetRequest(`${url}/auth`).then((res)=>{
-        window.location.assign(res.url)
-        // window.location.href = res.url
-    }).then(()=>console.log(window.location, "window"))
-}
+// export  async function init_login(){
+//     makeGetRequest(`${url}/auth`).then((res)=>{
+//         window.location.assign(res.url)
+//         // window.location.href = res.url
+//     }).then(()=>console.log(window.location, "window"))
+// }
 
-export async function login(id){
-    makeGetRequest(`${url}/auth/login?user_id=${id}`).then((res)=>{
-        localStorage.setItem("token", JSON.stringify(res.token))
-        localStorage.setItem("user", JSON.stringify(res.user_info))
-    })
-}
+// export async function login(id){
+//     makeGetRequest(`${url}/auth/login?user_id=${id}`).then((res)=>{
+//         if (res.user_info.email !== localStorage.getItem("email")){
+//             localStorage.setItem("user", JSON.stringify(res.user_info))
+//         }
+//         localStorage.setItem("token", JSON.stringify(res.token))
+//         localStorage.setItem("authenticated", "true")
+//     })
+// }
+
+// export async function logout(){
+//     user_id = JSON.parse(localStorage.getItem("user")).get("id")
+//     makeGetRequest(`${url}/auth/logout?user_id=${id}`).then(()=>localStorage.clear());
+// }

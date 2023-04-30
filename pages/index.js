@@ -4,14 +4,17 @@ import Slider from '@/components/Slider/Slider'
 import Showing from '@/components/Showing/Showing'
 import ComingSoon from '@/components/ComingSoon/ComingSoon'
 import Layout from '@/components/Layout/Layout'
+import UserContext from '@/contextapi/UserContext'
+
 // import SingleGallery from '@/components/Gallery/SingleGallery'
 import { api_config } from '@/requests'
-import { login } from './api/auth'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
+const {library} = require('@fortawesome/fontawesome-svg-core') // this instead of import prevents hydration error
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
+
+import { useContext, useEffect, useState } from 'react'
 
 library.add(fab, far, fas)
 
@@ -19,35 +22,46 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({upcoming_data, now_showing_data}) {
 
-  if (typeof window !== "undefined") {
-    let params = (new URL(document.location)).searchParams;
-    let success = params.get("success");
+  const {login} = useContext(UserContext)
+
+    const [params, setParams] = useState(null)
+
+    if (params){
+    let success = params.get("success")
     if (success){
-      let user_id = params.get("id")
-      login(user_id)
+        let user_id = params.get("id")
+        login(user_id)
+        setParams(null)
+        window.history.replaceState(null, '', window.location.pathname);
     }
-  }
+    }
+
+    useEffect(() => {
+        setParams((new URL(document.location)).searchParams)
+    }, [])
+
 
   return (
-    <div className=''>
-      <Head>
-          <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
-          <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
-          <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
-          <link rel="manifest" href="/site.webmanifest"/>
-          <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5"/>
-          <meta name="msapplication-TileColor" content="#ffc300"/>
-          <meta name="theme-color" content="#ffc300"/>
-      </Head>
-      <Layout title={"Cinema Train - Home"}>
-        <Slider showing={now_showing_data} />
-        <Showing showing={now_showing_data} />
-        <ComingSoon coming_soon={upcoming_data} />
-        {/* <Gallery /> */}
-      </Layout>
-    </div>
+      <div className=''>
+        <Head>
+            <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
+            <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
+            <link rel="manifest" href="/site.webmanifest"/>
+            <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5"/>
+            <meta name="msapplication-TileColor" content="#ffc300"/>
+            <meta name="theme-color" content="#ffc300"/>
+        </Head>
+        <Layout title={"Cinema Train - Home"}>
+          <Slider showing={now_showing_data} />
+          <Showing showing={now_showing_data} />
+          <ComingSoon coming_soon={upcoming_data} />
+          {/* <Gallery /> */}
+        </Layout>
+      </div>
   )
 }
+
 
 export async function getServerSideProps() {
 
