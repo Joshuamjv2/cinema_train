@@ -46,10 +46,10 @@ export default function Navigation(){
                     <Link href={"/"}><Image src={logo} height={40} className="w-auto h-12 cursor-pointer"/></Link>
                     <ul className="gap-8 items-center hidden lg:flex xl:gap-16">
                         <SingleNavItem key={"home"} name={"Home"} path={"/"}/>
-                        <SingleNavItem key={"showing"} name={"Showing"} path={"#now_showing"} />
-                        <SingleNavItem key={"coming_soon"} name={"Coming Soon"} path={"#coming_soon"} />
-                        {!isAuth && <SingleNavItem key={"community"} name={"The Community"} path={"#community"} />}
-                        <SingleNavItem name={"Contact Us"} path={"#contact"} />
+                        <SingleNavItem key={"showing"} name={"Showing"} path={"/#now_showing"} />
+                        <SingleNavItem key={"coming_soon"} name={"Coming Soon"} path={"/#coming_soon"} />
+                        {!isAuth && <SingleNavItem key={"community"} name={"The Community"} path={"/#community"} />}
+                        <SingleNavItem name={"Contact Us"} path={"/#contact"} />
                         {!isAuth ? 
                         <div onClick={handleLogin}>
                             <SingleNavItem key={"sing_in"} name={"Sign In"} path={"/"}/>

@@ -34,9 +34,9 @@ export default function Footer(){
                         </h4>
                         <ul className="text-md font-thin gap-3 flex flex-col">
                             <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"/"}>Home</Link></li>
-                            <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#now_showing"}>Showing</Link></li>
-                            <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#coming_soon"}>Coming Soon</Link></li>
-                            <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"#contact"}>Contact Us</Link></li>
+                        <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"/#now_showing"}>Showing</Link></li>
+                            <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"/#coming_soon"}>Coming Soon</Link></li>
+                            <li className="cursor-pointer hover:text-[#ffc300] duration-300"><Link href={"/#contact"}>Contact Us</Link></li>
                         </ul>
                     </li>
                     <li>
@@ -44,9 +44,9 @@ export default function Footer(){
                             Follow Us
                         </h4>
                         <div className="flex h-6 gap-4 mb-4">
-                            <FontAwesomeIcon icon={["fab", "facebook"]} style={{fontSize: 15, color: "#96031a"}} className="hover:scale-110 hover:duration-300" />
-                            <FontAwesomeIcon icon={["fab", "reddit"]} style={{fontSize: 15, color: "#96031a"}} className="hover:scale-110 hover:duration-300" />
-                            <FontAwesomeIcon icon={["fab", "instagram"]} style={{fontSize: 15, color: "#96031a"}} className="hover:scale-110 hover:duration-300" />
+                            <FontAwesomeIcon icon={["fab", "facebook"]} style={{fontSize: 25, color: "#96031a"}} className="hover:scale-110 hover:duration-300" />
+                            <FontAwesomeIcon icon={["fab", "reddit"]} style={{fontSize: 25, color: "#96031a"}} className="hover:scale-110 hover:duration-300" />
+                            <FontAwesomeIcon icon={["fab", "instagram"]} style={{fontSize: 25, color: "#96031a"}} className="hover:scale-110 hover:duration-300" />
                         </div>
                         <Link href="/"><Button text={"Sign In"}/></Link>
                     </li>

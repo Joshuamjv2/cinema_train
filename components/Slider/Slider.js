@@ -11,7 +11,7 @@ export default function Slider({showing}){
 
     return(
     <div className="relative h-screen">
-        return <SingleSlider data={current} />
+        <SingleSlider data={current} />
         {/* {showing.map((movie) => {
             return <SingleSlider key={movie.id} data={movie} />
         })} */}

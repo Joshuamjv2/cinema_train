@@ -1,26 +1,21 @@
-import Navigation from "../Layout/Navigation";
-import Button from "../Button";
-import Rating from "../Rating";
-import Cast from "../Cast";
-import Genre from "../Genre";
 import { useState } from "react";
+import Cast from "../Cast";
+import Rating from "../Rating";
+import Genre from "../Genre";
+import Button from "../Button";
+import SingleSliderTwo from "./SingleSliderTwo";
 
 
-export default function Slider({showing}){
-    const movies = showing
-    const [current, setCurrent] = useState(movies[0])
-    // const bg_image = `https://image.tmdb.org/t/p/original${current.backdrop_path}`
-    const slider_style = {
-    'backgroundImage':`linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url(https://image.tmdb.org/t/p/original${current.backdrop_path})`,
-    'backgroundSize': 'cover',
-    'backgroundRepeat': 'no-repeat',
-    'backgroundPosition': 'top',
-    'height': '100vh',
-    "overflow": "hidden"
+
+export default function SliderTwo({showing}){
+    const [current, setCurrent] = useState(showing[0])
+
+    function handleIndicatorClick(e, key){
+        setCurrent(showing[key])
     }
-
     return (
-            <div className="w-full top-0 bottom-0" style={slider_style}>
+        <div>
+            <SingleSliderTwo data={current}>
                 <div className="flex h-full items-center">
                     <div className="container flex justify-between">
                         <div>
@@ -56,6 +51,16 @@ export default function Slider({showing}){
                             </div>
                         </div>
                 </div>
+            </SingleSliderTwo>
+            <ul className="absolute right-1/2 md:flex justify-between translate-x-1/2 gap-8 hidden bottom-16 pt-2">
+                {showing.map((show, index)=>
+                    <li className="cursor-pointer">
+                        <div key={index} className="w-3.5 h-3.5 duration-300 border-2 rounded-full border-[#fff] overflow-hidden" style={showing[index] === current ? {background: "#96031a"} : {background: "transparent"}}
+                        onClick={e => handleIndicatorClick(e, index)}></div>
+                    </li>
+                )}
+        </ul>
         </div>
     )
 }
+
