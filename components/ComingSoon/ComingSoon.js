@@ -26,6 +26,7 @@ export default function ComingSoon({coming_soon}){
         setMain(key)
     }
 
+
     return(
         <div style={slider_style} className="flex justify-center" id="coming_soon">
         {/* py-8 px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:max-w-screen-2xl */}
@@ -62,22 +63,26 @@ export default function ComingSoon({coming_soon}){
                                 <Rating rating={movies[main].adult ? "18+": "PG"}/>
                                 <Button text={"Watch Trailer"}/>
                                 <div className="lg:flex hidden w-1/2 ml-2 xl:ml-4 2xl:ml-8">
-                                    <FontAwesomeIcon className="cursor-pointer" onClick={()=>{
-                                        if (main > 0){
-                                            return setMain(()=>main--)
-                                        }
-                                    }} icon={["fas", "angle-left"]} style={{fontSize: 40}} />
+                                    <div className="cursor-pointer" onClick={()=>{
+                                            if (main > 0){
+                                                return setMain((oldValue)=>oldValue-1)
+                                            }
+                                        }}>
+                                        <FontAwesomeIcon icon={["fas", "angle-left"]} style={{fontSize: 40}} />
+                                    </div>
                                     <ul className="flex items-center gap-8 xl:gap-12 px-4 xl:px-6">
                                         {movies.map((movie, index)=>
                                         <li className="cursor-pointer" key={index} onClick={event => handleMovieClick(event, index)}>
                                             <div className="h-3 w-3 border-2 rounded-full overflow-hidden duration-300" style={{backgroundColor: `${main == index ? "#96031a": "transparent"}`}}></div>
                                         </li>)}
                                     </ul>
-                                    <FontAwesomeIcon className="cursor-pointer" onClick={()=>{
-                                        if (main < movies.length-1){
-                                            return setMain(()=>main++)
-                                        }
-                                    }} icon={["fas", "angle-right"]} style={{fontSize: 40}} />
+                                    <div className="cursor-pointer" onClick={()=>{
+                                            if (main < movies.length-1){
+                                                return setMain((oldValue)=>oldValue+1)
+                                            }
+                                        }}>
+                                        <FontAwesomeIcon icon={["fas", "angle-right"]} style={{fontSize: 40}} />
+                                    </div>
                                 </div>
                             </div>
                     </div>
