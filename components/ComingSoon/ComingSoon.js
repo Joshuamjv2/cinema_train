@@ -64,7 +64,7 @@ export default function ComingSoon({coming_soon}){
                                 <div className="lg:flex hidden w-1/2 ml-2 xl:ml-4 2xl:ml-8">
                                     <FontAwesomeIcon className="cursor-pointer" onClick={()=>{
                                         if (main > 0){
-                                            setMain(()=>main--)
+                                            return setMain(()=>main--)
                                         }
                                     }} icon={["fas", "angle-left"]} style={{fontSize: 40}} />
                                     <ul className="flex items-center gap-8 xl:gap-12 px-4 xl:px-6">
@@ -75,7 +75,7 @@ export default function ComingSoon({coming_soon}){
                                     </ul>
                                     <FontAwesomeIcon className="cursor-pointer" onClick={()=>{
                                         if (main < movies.length-1){
-                                            setMain(()=>main++)
+                                            return setMain(()=>main++)
                                         }
                                     }} icon={["fas", "angle-right"]} style={{fontSize: 40}} />
                                 </div>
