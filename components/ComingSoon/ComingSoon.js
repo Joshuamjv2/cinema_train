@@ -64,7 +64,6 @@ export default function ComingSoon({coming_soon}){
                                 <div className="lg:flex hidden w-1/2 ml-2 xl:ml-4 2xl:ml-8">
                                     <FontAwesomeIcon className="cursor-pointer" onClick={()=>{
                                         if (main > 0){
-                                            console.log(main)
                                             setMain(()=>main--)
                                         }
                                     }} icon={["fas", "angle-left"]} style={{fontSize: 40}} />
