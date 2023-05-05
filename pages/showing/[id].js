@@ -31,7 +31,7 @@ export const getStaticProps = async (context) => {
     const movie = await fetch(`${api_config.movies_endpoint}/${id}?api_key=${api_config.apiKey}&language=en-US`)
     let movie_data = await movie.json()
 
-    console.log(movie_data)
+    // console.log(movie_data)
     const credits = await fetch(`${api_config.movies_endpoint}/${id}/credits?api_key=${api_config.apiKey}&language=en-US`)
     const credits_data = await credits.json()
 
