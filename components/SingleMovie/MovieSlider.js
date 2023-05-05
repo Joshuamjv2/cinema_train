@@ -40,11 +40,13 @@ export default function MovieSlider({movie}){
                     </div>
                 </div>}
             </div>
+            {play &&
+                <div className="absolute flex w-full h-full z-2 mx-auto">
+                    <iframe className="mx-auto h-full w-full" src={`https://www.youtube.com/embed/${movie.trailer.key}?rel=0&autoplay=1`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            }
             <div className="lg:flex gap-4 w-full justify-center relative mb-8">
 
-                {play && <div className="absolute flex w-full h-full z-2 mx-auto">
-                    <iframe className="mx-auto h-full w-full" src={`https://www.youtube.com/embed/${movie.trailer.key}?rel=0&autoplay=1`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>}
                 <div className="w-1/3 xl:block hidden">
                     <Image className="" src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} width={350} height={100} style={{"width": "100%", "height": "auto"}}/>
                 </div>
