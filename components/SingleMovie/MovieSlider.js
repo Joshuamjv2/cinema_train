@@ -37,7 +37,7 @@ export default function MovieSlider({movie}){
                 {/* movie rating */}
                 <div>
                     <div className="hidden md:flex items-center gap-2 md:gap-4">
-                        <div className="text-[#fbfffe] text-3xl md:text-2xl hover:text-[#96031a] bg-[#96031a] hover:duration-300 hover:bg-[#ffc300] flex">
+                        <div className="text-[#fbfffe] text-3xl md:text-2xl hover:text-[#96031a] bg-[#96031a] hover:duration-300 hover:bg-[#ffc300] hidden">
                             <FontAwesomeIcon className="cursor-pointer p-1" icon={["fas", "plus"]} style={{fontSize: "auto"}} />
                         </div>
 
@@ -59,7 +59,7 @@ export default function MovieSlider({movie}){
                         <div onClick={()=>setPlay(false)} className="text-xl lg:text-3xl pr-2 cursor-pointer">
                             <FontAwesomeIcon icon={["fas", "close"]} style={{fontSize: "auto"}}/>
                         </div>
-                        <iframe className="mx-auto h-full w-full" src={`https://www.youtube.com/embed/${movie.trailer.key}?rel=0&autoplay=1`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe className="mx-auto h-full w-full" src={`https://www.youtube.com/embed/${movie.trailer.key}?rel=0&autoplay=1`} title="YouTube video player" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 }
 
@@ -69,7 +69,7 @@ export default function MovieSlider({movie}){
                 {/* main section with trailer */}
                 <div className="w-full flex items-end hover:duration-200" style={slider_style}>
                     <div className="h-96"></div>
-                    <div className="cursor-pointer ml-2 mb-2 md:ml-4 xl:mb-8 xl:ml-8 md:mb-4 lg:w-3/4 xl:w-2/4">
+                    <div className="cursor-pointer ml-4 mb-4 md:ml-4 xl:mb-8 xl:ml-8 md:mb-4 lg:w-3/4 xl:w-2/4">
                         {/* movie title */}
                         <div className="hidden mb-1">
                             <h2 className="text-2xl lg:text-4xl font-bold uppercase text-[#fcc300] mr-4">{movie.original_title}</h2>
@@ -92,13 +92,13 @@ export default function MovieSlider({movie}){
                 </div>
             </div>
             {/* info on movie */}
-            <div className="mb-4 md:w-2/3 leading-normal">
-                <ul className="flex gap-2 mb-2 overflow-x-scroll scrollbar-hide">
+            <div className="mb-4 md:w-2/3 lg:w-1/2 leading-normal">
+                <ul className="gap-2 mb-2 overflow-x-scroll scrollbar-hide hidden">
                     {movie.genres.map(genre=><Genre key={genre.id} genre={genre.name}/>)}
                 </ul>
-                <p>{movie.overview}</p>
+                <p className="py-2 lg:py-4 hidden">{movie.overview}</p>
             </div>
-            <div className="mb-8 md:mb-32 lg:mb-36 flex justify-between items-start">
+            <div className="pb-12 md:pb-32 lg:pb-36 flex justify-between items-start">
                 <div className="lg:w-1/3">
                     <div className="items-center gap-3 flex">
                         <Rating rating={movie.adult ? "18+": "PG"}/>

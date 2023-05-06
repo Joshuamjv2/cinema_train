@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 
 
 import MovieSlider from "@/components/SingleMovie/MovieSlider";
+import Overview from "@/components/SingleMovie/Overview";
+import Credits from "@/components/SingleMovie/Credits/Credits";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,6 +36,7 @@ export const getStaticProps = async (context) => {
     // console.log(movie_data)
     const credits = await fetch(`${api_config.movies_endpoint}/${id}/credits?api_key=${api_config.apiKey}&language=en-US`)
     const credits_data = await credits.json()
+    
 
 
     const trailers = await fetch(`${api_config.movies_endpoint}/${id}/videos?api_key=${api_config.apiKey}&language=en-US`)
@@ -54,8 +57,8 @@ export const getStaticProps = async (context) => {
     }
 
 
-    movie_data.cast = credits_data.cast
-    movie_data.crew = credits_data.crew
+    movie_data.cast = credits_data.cast.slice(0,20)
+    movie_data.crew = credits_data.crew.slice(0,20)
     if (official_trailer){
         movie_data.trailer = official_trailer
     } else {
@@ -70,8 +73,12 @@ export const getStaticProps = async (context) => {
 
 export default function Movie({movie}){
     return (
-        <Layout title={movie.title}>
-            <MovieSlider movie={movie} />
-        </Layout>
+        <div className="bg-[#fff]">
+            <Layout title={movie.title}>
+                <MovieSlider movie={movie} />
+                <Overview movie={movie} />
+                <Credits cast={movie.cast} crew={movie.crew}/>
+            </Layout>
+        </div>
     )
 }

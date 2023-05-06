@@ -21,7 +21,7 @@ export default function SingleSlider({data}){
     return (
             <div className="w-full absolute top-0 bottom-0" style={slider_style}>
                 <div className="flex h-full items-center">
-                    <div className="container flex justify-between">
+                    <div className="px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container flex justify-between">
                         <div>
                             <h1 className="text-4xl md:text-7xl lg:text-5xl font-bold uppercase">{current.original_title}</h1>
                             <ul className="flex gap-2 lg:gap-4 mt-4 uppercase text-[#b4b3b6] flex-wrap text-sm lg:text-base">
