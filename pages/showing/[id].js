@@ -35,6 +35,7 @@ export const getStaticProps = async (context) => {
     const credits = await fetch(`${api_config.movies_endpoint}/${id}/credits?api_key=${api_config.apiKey}&language=en-US`)
     const credits_data = await credits.json()
 
+
     const trailers = await fetch(`${api_config.movies_endpoint}/${id}/videos?api_key=${api_config.apiKey}&language=en-US`)
     let trailer_data = await trailers.json()
     trailer_data = trailer_data.results
@@ -54,6 +55,7 @@ export const getStaticProps = async (context) => {
 
 
     movie_data.cast = credits_data.cast
+    movie_data.crew = credits_data.crew
     if (official_trailer){
         movie_data.trailer = official_trailer
     } else {

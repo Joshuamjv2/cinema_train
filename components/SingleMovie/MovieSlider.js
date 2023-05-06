@@ -37,7 +37,7 @@ export default function MovieSlider({movie}){
                 {/* movie rating */}
                 <div>
                     <div className="flex items-center gap-2 md:gap-4">
-                        <div className="text-[#fbfffe] text-3xl md:text-2xl hover:text-[#96031a] bg-[#96031a] hover:duration-300 hover:bg-[#ffc300]">
+                        <div className="text-[#fbfffe] text-3xl md:text-2xl hover:text-[#96031a] bg-[#96031a] hover:duration-300 hover:bg-[#ffc300] flex">
                             <FontAwesomeIcon className="cursor-pointer p-1" icon={["fas", "plus"]} style={{fontSize: "auto"}} />
                         </div>
 
@@ -72,7 +72,7 @@ export default function MovieSlider({movie}){
                     <div className="cursor-pointer ml-2 mb-2 md:ml-4 xl:mb-8 xl:ml-8 md:mb-4 lg:w-3/4 xl:w-2/4">
                         {/* movie title */}
                         <div className="md:hidden mb-1">
-                            <h2 className="text-2xl lg:text-4xl font-bold uppercase text-[#fcc300]">{movie.original_title}</h2>
+                            <h2 className="text-2xl lg:text-4xl font-bold uppercase text-[#fcc300] mr-4">{movie.original_title}</h2>
                             <div className="text-[#b4b3b6] flex gap-1 items-center text-base">
                                 <FontAwesomeIcon icon={["far", "clock"]} />
                                 <h6>{movie.runtime}m</h6>
@@ -93,7 +93,7 @@ export default function MovieSlider({movie}){
             </div>
             {/* info on movie */}
             <div className="mb-4 md:w-2/3 leading-normal">
-                <ul className="flex gap-2 mb-2">
+                <ul className="flex gap-2 mb-2 overflow-x-scroll scrollbar-hide">
                     {movie.genres.map(genre=><Genre key={genre.id} genre={genre.name}/>)}
                 </ul>
                 <p>{movie.overview}</p>
