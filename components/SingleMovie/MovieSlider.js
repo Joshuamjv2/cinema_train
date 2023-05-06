@@ -27,7 +27,7 @@ export default function MovieSlider({movie}){
         <div className="px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container">
             <div className="flex justify-between items-start gap-12 mb-4 mt-28 md:mt-32 lg:mt-36">
                 {/* movie title */}
-                <div className="hidden md:block">
+                <div className="">
                     <h2 className="text-2xl lg:text-4xl font-bold mb-2 uppercase text-[#fcc300]">{movie.original_title}</h2>
                     <div className="text-[#b4b3b6] flex gap-1 items-center text-base">
                         <FontAwesomeIcon icon={["far", "clock"]} />
@@ -36,7 +36,7 @@ export default function MovieSlider({movie}){
                 </div>
                 {/* movie rating */}
                 <div>
-                    <div className="flex items-center gap-2 md:gap-4">
+                    <div className="hidden md:flex items-center gap-2 md:gap-4">
                         <div className="text-[#fbfffe] text-3xl md:text-2xl hover:text-[#96031a] bg-[#96031a] hover:duration-300 hover:bg-[#ffc300] flex">
                             <FontAwesomeIcon className="cursor-pointer p-1" icon={["fas", "plus"]} style={{fontSize: "auto"}} />
                         </div>
@@ -71,7 +71,7 @@ export default function MovieSlider({movie}){
                     <div className="h-96"></div>
                     <div className="cursor-pointer ml-2 mb-2 md:ml-4 xl:mb-8 xl:ml-8 md:mb-4 lg:w-3/4 xl:w-2/4">
                         {/* movie title */}
-                        <div className="md:hidden mb-1">
+                        <div className="hidden mb-1">
                             <h2 className="text-2xl lg:text-4xl font-bold uppercase text-[#fcc300] mr-4">{movie.original_title}</h2>
                             <div className="text-[#b4b3b6] flex gap-1 items-center text-base">
                                 <FontAwesomeIcon icon={["far", "clock"]} />
