@@ -8,7 +8,7 @@ export default function Overview({movie}){
                     <p className="text-base mr-4">{movie.overview}</p>
                 </div>
                 <div className="hidden">
-                    <p className="ml-4">add rating</p>
+                    <p className="ml-2">add rating</p>
                     <p className="ml-4">add to favorites</p>
                 </div>
             </div>

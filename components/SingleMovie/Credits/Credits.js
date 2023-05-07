@@ -6,9 +6,9 @@ export default function Credits({cast, crew}){
             <div className="px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container pt-8">
                 <h2 className="text-2xl font-bold text-[#ffc300] pb-4 uppercase">Top Cast</h2>
 
-                <ul className="flex gap-8 lg:gap-4 md:grid grid-cols-4 overflow-x-auto scrollbar-hide">
+                <ul className="flex gap-8 xl:gap-16 lg:gap-4 md:grid grid-cols-4 overflow-x-auto scrollbar-hide">
                     {cast.map((single_cast=>{
-                        return <li key={single_cast.id}>
+                        return <li className="" key={single_cast.id}>
                                 <SingleCredit credit={single_cast}/>
                         </li>
                     }))}
