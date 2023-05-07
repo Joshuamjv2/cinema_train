@@ -20,7 +20,7 @@ export default function SingleSliderTwo({data, children}){
 
     return (
         <div className="relative bg-black">
-            <div className="w-full">
+            <div className="w-full bg-black">
                 {children}
             </div>
         </div>

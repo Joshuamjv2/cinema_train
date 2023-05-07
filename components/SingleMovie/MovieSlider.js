@@ -24,7 +24,7 @@ export default function MovieSlider({movie}){
 
     return (
     <SingleSliderTwo data={movie}>
-        <div className="px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container">
+        <div className="px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container pt-1">
             <div className="flex justify-between items-start gap-12 mb-4 mt-28 md:mt-32 lg:mt-36">
                 {/* movie title */}
                 <div className="">
