@@ -1,10 +1,17 @@
 import Image from "next/image";
+import cast1 from "../../../public/images/cast/cast6.webp"
 
 export default function SingleCredit({credit}){
+    let cast;
+    if (!credit.profile_path){
+        cast = cast1
+    } else {
+        cast = `https://image.tmdb.org/t/p/original${credit.profile_path}`
+    }
     return(
         <div className="flex flex-col my-4">
-            <div className="h-48 w-48">
-                <Image className="w-full h-full object-cover" src={`https://image.tmdb.org/t/p/original${credit.profile_path}`} width={250} height={100} />
+            <div className="h-64 w-52">
+                <Image className="w-full h-full object-cover" src={cast} width={250} height={100} />
             </div>
             <div className="mt-2">
                 <h3 className="font-bold text-xl">{credit.name}</h3>

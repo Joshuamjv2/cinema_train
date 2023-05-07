@@ -14,32 +14,32 @@ export default function Overview({movie}){
 
             <div className="">
                 <div className="mt-4 lg:w-2/4 md:w-2/3">
-                    <div className="flex gap-4 items-center border-b-2 pb-2 font-semibold">
+                    <div className="flex gap-8 items-center border-b pb-2 font-semibold">
                         <h3 className="uppercase text-[#96031a]">Language:</h3>
                         <p>{movie.original_language}</p>
                     </div>
                 </div>
 
                 <div className="mt-4 lg:w-2/4 md:w-2/3">
-                    <div className="flex gap-4 items-center border-b-2 pb-2 font-semibold">
+                    <div className="flex gap-8 items-center border-b pb-2 font-semibold">
                         <h3 className="uppercase text-[#96031a]">Genres:</h3>
-                        <ul className="flex gap-4">
-                            {movie.genres.map(genre=><li className="border-r-2 pr-4 last:border-r-0">{genre.name}</li>)}
+                        <ul className="flex gap-4 w-full overflow-x-auto scrollbar-hide">
+                            {movie.genres.map(genre=><li className="border-r pr-4 last:border-r-0">{genre.name}</li>)}
                         </ul>
                     </div>
                 </div>
 
                 <div className="mt-4 lg:w-2/4 md:w-2/3">
-                    <div className="flex gap-4 items-center border-b-2 pb-2 font-semibold">
+                    <div className="flex gap-8 items-center border-b pb-2 font-semibold">
                         <h3 className="uppercase text-[#96031a]">Production Countries:</h3>
                         <ul className="flex gap-4">
-                            {movie.production_countries.map(production=><li className="border-r-2 pr-4 last:border-r-0">{production.iso_3166_1}</li>)}
+                            {movie.production_countries.map(production=><li className="border-r pr-4 last:border-r-0">{production.iso_3166_1}</li>)}
                         </ul>
                     </div>
                 </div>
 
                 <div className="mt-4 lg:w-2/4 md:w-2/3">
-                    <div className="flex gap-4 items-center border-b-2 pb-2 font-semibold">
+                    <div className="flex gap-8 items-center border-b pb-2 font-semibold">
                         <h3 className="uppercase text-[#96031a]">Status:</h3>
                         <p>{movie.status}</p>
                     </div>
