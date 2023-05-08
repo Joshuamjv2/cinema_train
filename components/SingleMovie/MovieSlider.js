@@ -8,7 +8,7 @@ import Genre from "../Genre"
 
 export default function MovieSlider({movie}){
     const slider_style = {
-    'backgroundImage':`linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+    'backgroundImage':`linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
     'backgroundSize': 'cover',
     'backgroundRepeat': 'no-repeat',
     'backgroundPosition': 'top',

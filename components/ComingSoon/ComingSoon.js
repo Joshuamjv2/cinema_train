@@ -46,7 +46,7 @@ export default function ComingSoon({coming_soon}){
                             )}
                         </ul>
                         <p className="text-sm font-bold my-2 text-[#ffc300] lg:text-base">Coming: {movies[main].release_date}</p>
-                        <p className="text-lg leading-tight max-w-xs md:max-w-xl my-2 lg:mt-4">
+                        <p className="hidden sm:block text-base lg:text-lg leading-tight max-w-xs md:max-w-xl my-2 lg:mt-4">
                             {movies[main].overview}
                         </p>
                         {/* <ul className="hidden lg:flex gap-6 mt-8">

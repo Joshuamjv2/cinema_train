@@ -10,7 +10,7 @@ export default function SingleCredit({credit}){
     }
     return(
         <div className="flex flex-col my-4">
-            <div className="h-64 w-52">
+            <div className="w-52 md:w-48 lg:h-64 lg:w-52">
                 <Image className="w-full h-full object-cover" src={cast} width={250} height={100} />
             </div>
             <div className="mt-2">
