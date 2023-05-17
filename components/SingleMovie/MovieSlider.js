@@ -28,7 +28,7 @@ export default function MovieSlider({movie}){
             <div className="flex justify-between items-start gap-12 mb-4 mt-28 md:mt-32 lg:mt-36">
                 {/* movie title */}
                 <div className="">
-                    <h2 className="text-2xl lg:text-4xl font-bold mb-2 uppercase text-[#fcc300]">{movie.original_title}</h2>
+                    <h2 className="hidden text-2xl lg:text-4xl font-bold mb-2 uppercase text-[#fcc300]">{movie.original_title}</h2>
                     <div className="text-[#b4b3b6] flex gap-1 items-center text-base">
                         <FontAwesomeIcon icon={["far", "clock"]} />
                         <h6>{movie.runtime}m</h6>
@@ -36,13 +36,13 @@ export default function MovieSlider({movie}){
                 </div>
                 {/* movie rating */}
                 <div>
-                    <div className="hidden md:flex items-center gap-2 md:gap-4">
+                    <div className="flex items-center gap-2 md:gap-4">
                         <div className="text-[#fbfffe] text-3xl md:text-2xl hover:text-[#96031a] bg-[#96031a] hover:duration-300 hover:bg-[#ffc300] hidden">
                             <FontAwesomeIcon className="cursor-pointer p-1" icon={["fas", "plus"]} style={{fontSize: "auto"}} />
                         </div>
 
                         <div>
-                            <h3 className="text-base md:text-xl font-bold uppercase">Rating</h3>
+                            <h3 className="hidden text-base md:text-xl font-bold uppercase">Rating</h3>
                             <div className="flex items-center gap-2 text-base">
                                 <FontAwesomeIcon icon={["fas", "chart-line"]} style={{fontSize: "auto", color: "#b4b3b6"}} />
                                 <h6 className="font-semibold mr-1 md:mr-2 text-[#b4b3b6]">{movie.vote_average}/10</h6>
@@ -69,24 +69,28 @@ export default function MovieSlider({movie}){
                 {/* main section with trailer */}
                 <div className="w-full flex items-end hover:duration-200" style={slider_style}>
                     <div className="h-96"></div>
-                    <div className="cursor-pointer ml-4 mb-4 md:ml-4 xl:mb-8 xl:ml-8 md:mb-4 lg:w-3/4 xl:w-2/4">
+                    <div className="cursor-pointer ml-4 mb-4 md:ml-4 xl:mb-8 xl:ml-8 md:mb-4 lg:w-full">
                         {/* movie title */}
-                        <div className="hidden mb-1">
+                        <div className="hidden">
                             <h2 className="text-2xl lg:text-4xl font-bold uppercase text-[#fcc300] mr-4">{movie.original_title}</h2>
-                            <div className="text-[#b4b3b6] flex gap-1 items-center text-base">
-                                <FontAwesomeIcon icon={["far", "clock"]} />
-                                <h6>{movie.runtime}m</h6>
-                            </div>
                         </div>
-                        {/* movie rating */}
-                        <div className="flex gap-2 items-center">
-                            <div className="text-3xl lg:text-4xl" onClick={handlePlay}>
-                                {
-                                    play ? <FontAwesomeIcon icon={["far", "pause-circle"]} style={{fontSize: "auto"}}/>
-                                    : <FontAwesomeIcon icon={["far", "play-circle"]} style={{fontSize: "auto"}}/>
-                                }
+                        {/* trailer and tickets on bigger screens. Just trailer on smaller screens */}
+                        <div className="flex justify-between">
+                            <div className="hidden lg:block">
+                                <div className="items-center gap-3 flex">
+                                    <Rating rating={movie.adult ? "18+": "PG"}/>
+                                    <Button text={"Buy Tickets"}/>
+                                </div>
                             </div>
-                            <p className="text-2xl lg:text-3xl font-bold uppercase">Play Trailer</p>
+                            <div className="flex gap-2 items-center">
+                                <div className="text-3xl lg:text-4xl" onClick={handlePlay}>
+                                    {
+                                        play ? <FontAwesomeIcon icon={["far", "pause-circle"]} style={{fontSize: "auto"}}/>
+                                        : <FontAwesomeIcon icon={["far", "play-circle"]} style={{fontSize: "auto"}}/>
+                                    }
+                                </div>
+                                <p className="text-2xl lg:text-3xl font-bold uppercase">Play Trailer</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,7 +103,7 @@ export default function MovieSlider({movie}){
                 <p className="py-2 lg:py-4 hidden">{movie.overview}</p>
             </div>
             <div className="pb-12 md:pb-32 lg:pb-36 flex justify-between items-start">
-                <div className="lg:w-1/3">
+                <div className="lg:w-1/3 lg:hidden">
                     <div className="items-center gap-3 flex">
                         <Rating rating={movie.adult ? "18+": "PG"}/>
                         <Button text={"Buy Tickets"}/>
