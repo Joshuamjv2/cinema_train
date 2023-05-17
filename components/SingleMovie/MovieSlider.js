@@ -69,7 +69,7 @@ export default function MovieSlider({movie}){
                 {/* main section with trailer */}
                 <div className="w-full flex items-end hover:duration-200" style={slider_style}>
                     <div className="h-96"></div>
-                    <div className="cursor-pointer ml-4 mb-4 md:ml-4 xl:mb-8 xl:ml-8 md:mb-4 lg:w-full">
+                    <div className="cursor-pointer ml-4 mr-4 mb-4 md:ml-4 xl:mb-8 xl:ml-8 md:mb-4 lg:w-full">
                         {/* movie title */}
                         <div className="hidden">
                             <h2 className="text-2xl lg:text-4xl font-bold uppercase text-[#fcc300] mr-4">{movie.original_title}</h2>
