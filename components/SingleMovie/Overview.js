@@ -2,8 +2,9 @@ export default function Overview({movie}){
     return(
         <div className="px-4 mx-auto md:px-12 max-w-xl md:max-w-7xl lg:container py-4 md:py-8 text-black">
             <h2 className="text-2xl font-bold text-[#ffc300] pb-2 uppercase pt-4">Overview</h2>
+            {/* about movie */}
             <div className="flex gap-4 items-start">
-                <div className="lg:w-2/4 md:w-2/3 ">
+                <div className="lg:w-3/4 md:w-2/3 ">
                     <p className="text-base mr-4">{movie.overview}</p>
                 </div>
                 <div className="hidden">
@@ -12,15 +13,16 @@ export default function Overview({movie}){
                 </div>
             </div>
 
-            <div className="">
-                <div className="mt-4 lg:w-2/4 md:w-2/3">
+            {/* movie details */}
+            <div className="mt-8">
+                <div className="mt-4 lg:w-3/4 md:w-2/3">
                     <div className="flex gap-8 items-center border-b pb-2 font-semibold">
                         <h3 className="uppercase text-[#96031a]">Language:</h3>
                         <p>{movie.original_language}</p>
                     </div>
                 </div>
 
-                <div className="mt-4 lg:w-2/4 md:w-2/3">
+                <div className="mt-4 lg:w-3/4 md:w-2/3">
                     <div className="flex gap-8 items-center border-b pb-2 font-semibold">
                         <h3 className="uppercase text-[#96031a]">Genres:</h3>
                         <ul className="flex gap-4 w-full overflow-x-auto scrollbar-hide">
@@ -29,7 +31,7 @@ export default function Overview({movie}){
                     </div>
                 </div>
 
-                <div className="mt-4 lg:w-2/4 md:w-2/3">
+                <div className="mt-4 lg:w-3/4 md:w-2/3">
                     <div className="flex gap-8 items-center border-b pb-2 font-semibold">
                         <h3 className="uppercase text-[#96031a]">Production Countries:</h3>
                         <ul className="flex gap-4">
@@ -38,7 +40,7 @@ export default function Overview({movie}){
                     </div>
                 </div>
 
-                <div className="mt-4 lg:w-2/4 md:w-2/3">
+                <div className="mt-4 lg:w-3/4 md:w-2/3">
                     <div className="flex gap-8 items-center border-b pb-2 font-semibold">
                         <h3 className="uppercase text-[#96031a]">Status:</h3>
                         <p>{movie.status}</p>

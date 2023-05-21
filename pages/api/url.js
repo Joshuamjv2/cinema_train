@@ -1,1 +1,1 @@
-export const url = "http://localhost:8000";
+export const url = "https://5jjkftf4tl6imkcu5g7mzuke3a0epjox.lambda-url.us-east-1.on.aws/";
