@@ -18,7 +18,7 @@ export default function Slider({showing}){
         {/* {showing.map((movie) => {
             return <SingleSlider key={movie.id} data={movie} />
         })} */}
-        <div className="absolute right-1/2 bottom-12 md:bottom-16 flex translate-x-1/2 items-center gap-4 md:gap-8 pt-2">
+        <div className="absolute right-1/2 bottom-14 md:bottom-16 flex translate-x-1/2 items-center gap-4 md:gap-8 pt-2">
             <div className="cursor-pointer" onClick={()=>{showing.indexOf(current) > 0 && setCurrent((oldValue)=>showing[showing.indexOf(oldValue)-1])}}>
                 <FontAwesomeIcon className="text-xl md:text-2xl lg:text-3xl" icon={["fas", "angle-left"]} />
             </div>
