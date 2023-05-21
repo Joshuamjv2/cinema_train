@@ -24,7 +24,6 @@ export const UserContextProvider = ({children}) => {
     }
 
     async function login(id){
-        console.log(url, "URL----------")
         makeGetRequest(`${url}/auth/login?user_id=${id}`).then((res)=>{
             if (res.user_info.email !== localStorage.getItem("email")){
                 localStorage.setItem("user", JSON.stringify(res.user_info))

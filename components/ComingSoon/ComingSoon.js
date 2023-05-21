@@ -68,12 +68,12 @@ export default function ComingSoon({coming_soon}){
                                                 return setMain((oldValue)=>oldValue-1)
                                             }
                                         }}>
-                                        <FontAwesomeIcon icon={["fas", "angle-left"]} style={{fontSize: 40}} />
+                                        <FontAwesomeIcon className="text-xl md:text-2xl lg:text-3xl" icon={["fas", "angle-left"]} />
                                     </div>
                                     <ul className="flex items-center gap-8 xl:gap-12 px-4 xl:px-6">
                                         {movies.map((movie, index)=>
                                         <li className="cursor-pointer" key={index} onClick={event => handleMovieClick(event, index)}>
-                                            <div className="h-3 w-3 border-2 rounded-full overflow-hidden duration-300" style={{backgroundColor: `${main == index ? "#96031a": "transparent"}`}}></div>
+                                            <div className="h-2 w-2 md:h-3 md:w-3 border-2 rounded-full overflow-hidden duration-300" style={{backgroundColor: `${main == index ? "#96031a": "transparent"}`}}></div>
                                         </li>)}
                                     </ul>
                                     <div className="cursor-pointer" onClick={()=>{
@@ -81,7 +81,7 @@ export default function ComingSoon({coming_soon}){
                                                 return setMain((oldValue)=>oldValue+1)
                                             }
                                         }}>
-                                        <FontAwesomeIcon icon={["fas", "angle-right"]} style={{fontSize: 40}} />
+                                        <FontAwesomeIcon className="text-xl md:text-2xl lg:text-3xl" icon={["fas", "angle-right"]} />
                                     </div>
                                 </div>
                             </div>
