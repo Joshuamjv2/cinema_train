@@ -30,6 +30,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -37,6 +38,10 @@ body {
   max-width: 90%;
   padding-inline: 1rem;
   margin: 0 auto;
+}
+
+.bar {
+  transition: transform 250ms ease-in-out;
 }
 
 @media (min-width: 640px) {

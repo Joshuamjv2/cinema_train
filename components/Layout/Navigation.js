@@ -7,11 +7,13 @@ import Link from "next/link";
 import UserContext from "@/contextapi/UserContext";
 import { useContext } from "react";
 import { Contrail_One } from "next/font/google";
+import { faRotate } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navigation(){
 
     const [clientWindowHeight, setClientWindowHeight] = useState("");
     const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
+    const [burgerOpen, setBurgerOpen] = useState(false)
 
     const {init_login, logout, isAuth, userInfo} = useContext(UserContext)
 
@@ -45,6 +47,23 @@ export default function Navigation(){
             <nav className="flex justify-between px-4 md:px-12 items-center py-4 md:py-6">
                     <Link href={"/"}><Image src={logo} height={40} className="w-auto h-12 cursor-pointer"/></Link>
                     {/* small screen nav */}
+                    <div onClick={()=>setBurgerOpen(!burgerOpen)} className="hamburger flex flex-col gap-1 lg:hidden">
+                        <span className="bar block h-1 w-8 bg-[#96031a]"
+                        style={burgerOpen === true && burgerOpen !== 0 ? {
+                        backgroundColor: "#ffc300",
+                        transform: "rotate(-45deg) translateY(12px)"
+                        }: {}}></span>
+                        <span className="bar block h-1 w-8 bg-[#96031a]"
+                        style={burgerOpen === true && burgerOpen !== 0 ? {
+                        opacity: 0
+                        }: {}}></span>
+                        <span className="bar block h-1 w-8 bg-[#96031a]"
+                        style={burgerOpen === true && burgerOpen !== 0 ? {
+                        backgroundColor: "#ffc300",
+                        transform: "rotate(45deg) translateY(-12px)"
+
+                    }: {}}></span>
+                    </div>
 
                     {/* large screen nav */}
                     <ul className="gap-6 items-center hidden lg:flex xl:gap-16">
